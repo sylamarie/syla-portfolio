@@ -1,0 +1,4 @@
+12:23:22 PM [vite] (client) [Unhandled error] SyntaxError: The requested module '/node_modules/.vite/deps/lucide-react.js?v=7c1a80d6' does not provide an export named 'Github'
+
+12:24:35 PM [vite] (client) [Unhandled error] SyntaxError: The requested module '/node_modules/.vite/deps/lucide-react.js?v=7c1a80d6' does not provide an export named 'Github'
+

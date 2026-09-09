@@ -1,0 +1,12 @@
+
+  VITE v8.2.2  ready in 636 ms
+
+  ➜  Local:   http://127.0.0.1:3000/
+  ➜  press h + enter to show help
+12:18:20 PM [vite] (client) [optimizer] bundling dependencies...
+12:23:21 PM [vite] (client) page reload src/main.jsx
+12:24:34 PM [vite] (client) page reload src/main.jsx
+12:24:49 PM [vite] (client) page reload src/main.jsx
+12:25:30 PM [vite] (client) hmr update /src/reference.css
+12:26:21 PM [vite] (client) page reload src/main.jsx
+12:26:22 PM [vite] (client) hmr update /src/reference.css
