@@ -2,7 +2,7 @@
 :root{--paper:#eeeae4;--ink:#211d30;--muted:#5d5869;--purple:#302063;--cream:#f7f5fc}
 body{padding:12px;background:#c5c2ba;background-image:radial-gradient(ellipse at 10% 30%,#a9a89e 0,transparent 40%),radial-gradient(ellipse at 92% 76%,#ded9cf 0,transparent 45%);font-family:'DM Sans',Arial,sans-serif}
 .site{border-radius:70px;background:#f7f5fc;overflow:hidden}.grain{display:none}
-.reference-hero{position:relative;height:calc(100svh - 24px);min-height:780px;max-height:1300px;border:6px solid #f7f5fc;border-radius:70px;overflow:hidden;background:#9dc2da url('/page-heroes/villa-background.png') center center/cover no-repeat;isolation:isolate}
+.reference-hero{position:relative;height:calc(100svh - 24px);min-height:780px;max-height:1300px;border:6px solid #f7f5fc;border-radius:70px;overflow:hidden;background:#9dc2da url('/page-heroes/villa-background.webp') center center/cover no-repeat;isolation:isolate}
 .reference-hero:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(65,91,130,.03),transparent 58%,rgba(25,31,54,.16))}
 .topbar{position:absolute;left:7.2%;right:7.2%;top:0;height:90px;display:flex;justify-content:space-between;align-items:flex-start;gap:25px;z-index:6}
 .top-pill{background:#f7f5fc;border-radius:99px;min-width:160px;min-height:54px;padding:15px 25px;display:flex;justify-content:center;align-items:center;gap:22px;color:#252130;text-decoration:none;font-size:16px;margin-top:18px}.top-pill svg{color:#c39c56}
@@ -30,10 +30,10 @@ a:focus-visible,button:focus-visible{outline:3px solid #8260d5;outline-offset:5p
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marquee>div{animation:none;display:flex;flex-wrap:wrap;white-space:normal}.marquee{overflow:visible}.toolbelt{align-items:flex-start}.marquee span{padding-bottom:10px}*{transition:none!important}}
 
 /* Distinct page visuals, kept within the Home palette. */
-.projects{background-image:linear-gradient(90deg,rgba(247,245,252,.96) 0%,rgba(247,245,252,.78) 48%,rgba(247,245,252,.42) 100%),url('/page-heroes/projects-hero.png');background-size:cover;background-position:center}
-.services{background-image:linear-gradient(90deg,rgba(229,229,239,.97) 0%,rgba(229,229,239,.82) 52%,rgba(229,229,239,.48) 100%),url('/page-heroes/services-hero.png');background-size:cover;background-position:center}
-.about{background-image:linear-gradient(90deg,rgba(212,228,237,.9) 0%,rgba(212,228,237,.76) 50%,rgba(212,228,237,.42) 100%),url('/page-heroes/about-hero.png');background-size:cover;background-position:center}
-.contact{background-image:linear-gradient(90deg,rgba(41,32,68,.94) 0%,rgba(41,32,68,.78) 50%,rgba(41,32,68,.42) 100%),url('/page-heroes/contact-hero.png');background-size:cover;background-position:center}
+.projects{background-image:linear-gradient(90deg,rgba(247,245,252,.96) 0%,rgba(247,245,252,.78) 48%,rgba(247,245,252,.42) 100%),url('/page-heroes/projects-hero.webp');background-size:cover;background-position:center}
+.services{background-image:linear-gradient(90deg,rgba(229,229,239,.97) 0%,rgba(229,229,239,.82) 52%,rgba(229,229,239,.48) 100%),url('/page-heroes/services-hero.webp');background-size:cover;background-position:center}
+.about{background-image:linear-gradient(90deg,rgba(212,228,237,.9) 0%,rgba(212,228,237,.76) 50%,rgba(212,228,237,.42) 100%),url('/page-heroes/about-hero.webp');background-size:cover;background-position:center}
+.contact{background-image:linear-gradient(90deg,rgba(41,32,68,.94) 0%,rgba(41,32,68,.78) 50%,rgba(41,32,68,.42) 100%),url('/page-heroes/contact-hero.webp');background-size:cover;background-position:center}
 
 /* React route state controls which page is visible. Keeping visibility in one
    place avoids a hash-target repaint racing the React update. */
@@ -57,7 +57,7 @@ body{background:var(--page-backdrop,#aebdca);background-image:none;transition:ba
 .site.page-projects,.site.page-services,.site.page-about,.site.page-contact{border:6px solid #f7f5fc}
 .site.page-home>section:not(.reference-hero),.site.page-home>footer{display:none}
 .site.page-projects>#projects,.site.page-services>#services,.site.page-about>#about,.site.page-contact>#contact{height:100%;max-height:none;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;padding-top:150px}
-.site.page-projects>#projects{background-image:linear-gradient(90deg,rgba(247,245,252,.96) 0%,rgba(247,245,252,.78) 48%,rgba(247,245,252,.42) 100%),url('/page-heroes/projects-hero.png')}
+.site.page-projects>#projects{background-image:linear-gradient(90deg,rgba(247,245,252,.96) 0%,rgba(247,245,252,.78) 48%,rgba(247,245,252,.42) 100%),url('/page-heroes/projects-hero.webp')}
 .site.page-home>.rail nav a:nth-child(1),.site.page-projects>.rail nav a:nth-child(2),.site.page-services>.rail nav a:nth-child(3),.site.page-about>.rail nav a:nth-child(4),.site.page-contact>.rail nav a:nth-child(5){background:#f7f5fc!important;color:#302063!important}
 @media(max-width:760px){.site{inset:10px;height:calc(100svh - 20px);border-radius:35px}.site.page-projects,.site.page-services,.site.page-about,.site.page-contact{border-width:4px}.site.page-projects>#projects,.site.page-services>#services,.site.page-about>#about,.site.page-contact>#contact{padding-top:110px}}
 @media(prefers-reduced-motion:reduce){body{transition:none}}
@@ -73,38 +73,38 @@ body{color:var(--page-text)}
 .site.night .intro-card{background:#302e43;color:#f3eff5}.site.night .intro-card>p,.site.night .glass-card>p{color:#d8d2df}.site.night .glass-card{background:linear-gradient(125deg,rgba(54,53,76,.9),rgba(67,56,66,.88) 54%,rgba(55,61,91,.9));color:#f3eff5}.site.night .glass-heading>div>p,.site.night .skill-details{color:#d8d2df}.site.night .glass-heading .round-button,.site.night .round-button{background:#4a4561;color:#fff}
 .site.night .reference-hero:before{background:linear-gradient(180deg,rgba(28,35,64,.24),transparent 58%,rgba(12,16,35,.38))}.site.night .contact-orb{background:#9d8fca;color:#29233d}
 .site.night.page-projects>.reference-hero,.site.night.page-services>.reference-hero,.site.night.page-about>.reference-hero,.site.night.page-contact>.reference-hero{background:#29283a!important;border-color:#29283a}
-.site.night.page-projects>#projects{background-image:linear-gradient(90deg,rgba(52,51,72,.96) 0%,rgba(52,51,72,.82) 48%,rgba(52,51,72,.58) 100%),url('/page-heroes/projects-hero.png')}
+.site.night.page-projects>#projects{background-image:linear-gradient(90deg,rgba(52,51,72,.96) 0%,rgba(52,51,72,.82) 48%,rgba(52,51,72,.58) 100%),url('/page-heroes/projects-hero.webp')}
 .site.night.page-home>.rail nav a:nth-child(1),.site.night.page-projects>.rail nav a:nth-child(2),.site.night.page-services>.rail nav a:nth-child(3),.site.night.page-about>.rail nav a:nth-child(4),.site.night.page-contact>.rail nav a:nth-child(5){background:#514a68!important;color:#fff!important}
-.reference-hero{background-image:url('/page-heroes/villa-background-morning.png')!important;background-size:cover;background-position:center}
-.site.night .reference-hero{background-image:url('/page-heroes/villa-background.png')!important}
+.reference-hero{background-image:url('/page-heroes/villa-background-morning.webp')!important;background-size:cover;background-position:center}
+.site.night .reference-hero{background-image:url('/page-heroes/villa-background.webp')!important}
 .site:not(.night) .rail-bottom .theme-light{background:#f7f5fc;color:#302063;box-shadow:0 4px 10px rgba(47,35,66,.08)}
 .site.night .rail-bottom .theme-dark{background:#514a68;color:#fff;box-shadow:0 4px 10px rgba(8,10,26,.28)}
 .site.night .rail-bottom .theme-light{background:rgba(60,57,80,.72);color:#e9e2f2;box-shadow:none}
-.site:not(.night) .projects{background-image:linear-gradient(90deg,rgba(247,245,252,.96) 0%,rgba(247,245,252,.78) 48%,rgba(247,245,252,.42) 100%),url('/page-heroes/projects-morning.png')}
-.site.night .projects{background-image:linear-gradient(90deg,rgba(52,51,72,.9) 0%,rgba(52,51,72,.72) 48%,rgba(52,51,72,.4) 100%),url('/page-heroes/projects-hero.png')}
-.site:not(.night) .services{background-image:linear-gradient(90deg,rgba(229,229,239,.97) 0%,rgba(229,229,239,.82) 52%,rgba(229,229,239,.48) 100%),url('/page-heroes/services-hero.png')}
-.site.night .services{background-image:linear-gradient(90deg,rgba(61,59,80,.9) 0%,rgba(61,59,80,.72) 52%,rgba(61,59,80,.4) 100%),url('/page-heroes/services-evening.png')}
-.site:not(.night) .about{background-image:linear-gradient(90deg,rgba(212,228,237,.9) 0%,rgba(212,228,237,.76) 50%,rgba(212,228,237,.42) 100%),url('/page-heroes/about-morning.png')}
-.site.night .about{background-image:linear-gradient(90deg,rgba(57,67,74,.88) 0%,rgba(57,67,74,.7) 50%,rgba(57,67,74,.38) 100%),url('/page-heroes/about-hero.png')}
-.site:not(.night) .contact{background-image:linear-gradient(90deg,rgba(223,218,224,.92) 0%,rgba(223,218,224,.76) 50%,rgba(223,218,224,.4) 100%),url('/page-heroes/contact-morning.png');color:#211d30}
+.site:not(.night) .projects{background-image:linear-gradient(90deg,rgba(247,245,252,.96) 0%,rgba(247,245,252,.78) 48%,rgba(247,245,252,.42) 100%),url('/page-heroes/projects-morning.webp')}
+.site.night .projects{background-image:linear-gradient(90deg,rgba(52,51,72,.9) 0%,rgba(52,51,72,.72) 48%,rgba(52,51,72,.4) 100%),url('/page-heroes/projects-hero.webp')}
+.site:not(.night) .services{background-image:linear-gradient(90deg,rgba(229,229,239,.97) 0%,rgba(229,229,239,.82) 52%,rgba(229,229,239,.48) 100%),url('/page-heroes/services-hero.webp')}
+.site.night .services{background-image:linear-gradient(90deg,rgba(61,59,80,.9) 0%,rgba(61,59,80,.72) 52%,rgba(61,59,80,.4) 100%),url('/page-heroes/services-evening.webp')}
+.site:not(.night) .about{background-image:linear-gradient(90deg,rgba(212,228,237,.9) 0%,rgba(212,228,237,.76) 50%,rgba(212,228,237,.42) 100%),url('/page-heroes/about-morning.webp')}
+.site.night .about{background-image:linear-gradient(90deg,rgba(57,67,74,.88) 0%,rgba(57,67,74,.7) 50%,rgba(57,67,74,.38) 100%),url('/page-heroes/about-hero.webp')}
+.site:not(.night) .contact{background-image:linear-gradient(90deg,rgba(223,218,224,.92) 0%,rgba(223,218,224,.76) 50%,rgba(223,218,224,.4) 100%),url('/page-heroes/contact-morning.webp');color:#211d30}
 .site:not(.night) .contact h2{color:#211d30}.site:not(.night) .contact .eyebrow{color:#5d5869}.site:not(.night) .contact .email{color:#302063}
-.site.night .contact{background-image:linear-gradient(90deg,rgba(36,32,54,.9) 0%,rgba(36,32,54,.72) 50%,rgba(36,32,54,.4) 100%),url('/page-heroes/contact-hero.png')}
+.site.night .contact{background-image:linear-gradient(90deg,rgba(36,32,54,.9) 0%,rgba(36,32,54,.72) 50%,rgba(36,32,54,.4) 100%),url('/page-heroes/contact-hero.webp')}
 .site.page-projects>.reference-hero,.site.page-services>.reference-hero,.site.page-about>.reference-hero,.site.page-contact>.reference-hero{display:none}
 .site.page-projects>#projects,.site.page-services>#services,.site.page-about>#about,.site.page-contact>#contact{height:100%;min-height:100%;padding-top:150px}
 .site.page-projects,.site.page-services,.site.page-about,.site.page-contact{border:0!important}
 .site.page-projects>#projects,.site.page-services>#services,.site.page-about>#about,.site.page-contact>#contact{border:6px solid #f7f5fc;border-radius:70px}
 .reference-hero,.projects,.services,.about,.contact{isolation:isolate;background-image:none!important;overflow:hidden}
 .reference-hero:before,.reference-hero:after,.projects:before,.projects:after,.services:before,.services:after,.about:before,.about:after,.contact:before,.contact:after{content:"";position:absolute;inset:0;background-size:cover;background-position:center center;background-repeat:no-repeat;background-attachment:fixed;pointer-events:none;transition:opacity .4s ease;z-index:-1}
-.reference-hero:before{background-image:linear-gradient(180deg,rgba(40,56,88,.08),transparent 60%,rgba(20,26,48,.16)),url('/page-heroes/villa-background-morning.png');opacity:1}
-.reference-hero:after{background-image:linear-gradient(180deg,rgba(28,35,64,.16),transparent 58%,rgba(12,16,35,.3)),url('/page-heroes/villa-background.png');opacity:0}
-.projects:before{background-image:linear-gradient(90deg,rgba(247,245,252,.96),rgba(247,245,252,.54)),url('/page-heroes/projects-morning.png');opacity:1}
-.projects:after{background-image:linear-gradient(90deg,rgba(52,51,72,.9),rgba(52,51,72,.42)),url('/page-heroes/projects-hero.png');opacity:0}
-.services:before{background-image:linear-gradient(90deg,rgba(229,229,239,.97),rgba(229,229,239,.48)),url('/page-heroes/services-hero.png');opacity:1}
-.services:after{background-image:linear-gradient(90deg,rgba(61,59,80,.9),rgba(61,59,80,.4)),url('/page-heroes/services-evening.png');opacity:0}
-.about:before{background-image:linear-gradient(90deg,rgba(212,228,237,.9),rgba(212,228,237,.42)),url('/page-heroes/about-morning.png');opacity:1}
-.about:after{background-image:linear-gradient(90deg,rgba(57,67,74,.88),rgba(57,67,74,.36)),url('/page-heroes/about-hero.png');opacity:0}
-.contact:before{background-image:linear-gradient(90deg,rgba(223,218,224,.92),rgba(223,218,224,.4)),url('/page-heroes/contact-morning.png');opacity:1}
-.contact:after{background-image:linear-gradient(90deg,rgba(36,32,54,.9),rgba(36,32,54,.38)),url('/page-heroes/contact-hero.png');opacity:0}
+.reference-hero:before{background-image:linear-gradient(180deg,rgba(40,56,88,.08),transparent 60%,rgba(20,26,48,.16)),url('/page-heroes/villa-background-morning.webp');opacity:1}
+.reference-hero:after{background-image:linear-gradient(180deg,rgba(28,35,64,.16),transparent 58%,rgba(12,16,35,.3)),url('/page-heroes/villa-background.webp');opacity:0}
+.projects:before{background-image:linear-gradient(90deg,rgba(247,245,252,.96),rgba(247,245,252,.54)),url('/page-heroes/projects-morning.webp');opacity:1}
+.projects:after{background-image:linear-gradient(90deg,rgba(52,51,72,.9),rgba(52,51,72,.42)),url('/page-heroes/projects-hero.webp');opacity:0}
+.services:before{background-image:linear-gradient(90deg,rgba(229,229,239,.97),rgba(229,229,239,.48)),url('/page-heroes/services-hero.webp');opacity:1}
+.services:after{background-image:linear-gradient(90deg,rgba(61,59,80,.9),rgba(61,59,80,.4)),url('/page-heroes/services-evening.webp');opacity:0}
+.about:before{background-image:linear-gradient(90deg,rgba(212,228,237,.9),rgba(212,228,237,.42)),url('/page-heroes/about-morning.webp');opacity:1}
+.about:after{background-image:linear-gradient(90deg,rgba(57,67,74,.88),rgba(57,67,74,.36)),url('/page-heroes/about-hero.webp');opacity:0}
+.contact:before{background-image:linear-gradient(90deg,rgba(223,218,224,.92),rgba(223,218,224,.4)),url('/page-heroes/contact-morning.webp');opacity:1}
+.contact:after{background-image:linear-gradient(90deg,rgba(36,32,54,.9),rgba(36,32,54,.38)),url('/page-heroes/contact-hero.webp');opacity:0}
 .reference-hero>.hero,.projects>*,.services>*,.about>*,.contact>*{position:relative;z-index:1}
 .site.night .reference-hero:before,.site.night .projects:before,.site.night .services:before,.site.night .about:before,.site.night .contact:before{opacity:0}
 .site.night .reference-hero:after,.site.night .projects:after,.site.night .services:after,.site.night .about:after,.site.night .contact:after{opacity:1}
@@ -214,8 +214,8 @@ body{transition:background-color var(--theme-normal) var(--theme-ease),color var
 }
 
 /* Home uses the same shared two-layer theme transition as the other pages. */
-.site.page-home .reference-hero:before{background-image:linear-gradient(180deg,rgba(40,56,88,.08),transparent 60%,rgba(20,26,48,.16)),url('/page-heroes/home-workspace-morning.png') !important;opacity:1}
-.site.page-home .reference-hero:after{background-image:linear-gradient(180deg,rgba(28,35,64,.16),transparent 58%,rgba(12,16,35,.3)),url('/page-heroes/home-workspace-evening.png') !important;opacity:0}
+.site.page-home .reference-hero:before{background-image:linear-gradient(180deg,rgba(40,56,88,.08),transparent 60%,rgba(20,26,48,.16)),url('/page-heroes/home-workspace-morning.webp') !important;opacity:1}
+.site.page-home .reference-hero:after{background-image:linear-gradient(180deg,rgba(28,35,64,.16),transparent 58%,rgba(12,16,35,.3)),url('/page-heroes/home-workspace-evening.webp') !important;opacity:0}
 .site.night.page-home .reference-hero:before{opacity:0 !important}
 .site.night.page-home .reference-hero:after{opacity:1 !important}
 .site:not(.night).page-home .reference-hero:before{opacity:1 !important}
