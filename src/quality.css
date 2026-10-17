@@ -3449,3 +3449,15 @@ button.showcase-link{border:0;font:inherit;font-weight:600;cursor:pointer}
   .site .contact-education-text span{font-size:14px}
   .site .contact-education-text small{font-size:12px}
 }
+
+/* Touch: no browser tap-highlight box on links and buttons.
+   Keyboard focus rings are untouched (:focus-visible still shows). */
+html{-webkit-tap-highlight-color:transparent}
+a,button,summary,label,[role=button],input,textarea,select{-webkit-tap-highlight-color:transparent}
+a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus:not(:focus-visible){outline:none}
+
+/* Contact (phones): leave exactly the bottom bar's height under the content so the
+   last card can scroll fully into view, and nothing more. */
+@media (max-width:760px){
+  .site.page-contact>#contact>.page-scroll{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
+}
