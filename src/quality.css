@@ -3330,3 +3330,122 @@ button.showcase-link{border:0;font:inherit;font-weight:600;cursor:pointer}
 .site .text-button:active{transform:scale(.97)}
 .site.night .text-button{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#f3eefc;box-shadow:0 6px 16px rgba(6,5,18,.3),inset 0 1px 0 rgba(255,255,255,.14)}
 .site.night .text-button:hover,.site.night .text-button:focus-visible{background:rgba(255,255,255,.2)}
+
+/* Theme options are real buttons now: neutral reset (zero specificity so existing styles win) */
+:where(button.theme-option){appearance:none;border:0;padding:0;margin:0;font:inherit;color:inherit;background:none;cursor:pointer}
+.theme-switch:focus-within{outline:none}
+.theme-option:focus-visible{outline:3px solid #8260d5;outline-offset:2px;border-radius:50%}
+
+/* Visually hidden, still read by screen readers */
+.sr-only{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* About intro: three clear actions */
+.site .about-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+@media(max-width:760px){.site .about-actions .text-button{flex:1 1 100%}}
+
+/* Projects: free-hosting note */
+.showcase-note{margin:12px 0 0;font-size:12.5px;line-height:1.4;opacity:.7}
+
+/* Home (desktop): slightly more solid intro card so its text reads over the photo */
+@media (min-width:761px){
+  .site.page-home .intro-card{background:rgba(247,245,252,.8)!important;backdrop-filter:blur(18px) saturate(140%)!important;-webkit-backdrop-filter:blur(18px) saturate(140%)!important}
+  .site.night.page-home .intro-card{background:rgba(48,46,67,.82)!important}
+}
+
+/* Contact (desktop): one tidy left column instead of scattered items */
+@media (min-width:761px){
+  .site.page-contact #contact .contact-orb{display:none!important}
+  .site.page-contact>#contact>.page-scroll{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:18px!important;padding-top:150px!important}
+  .site.page-contact>#contact>.page-scroll>*{position:static!important;inset:auto!important;transform:none!important;margin:0!important;max-width:620px;width:auto!important;flex:0 0 auto!important}
+  .site.page-contact>#contact>.page-scroll>div:first-child{max-width:none}
+  .site .contact-note{justify-content:flex-start;padding:10px 16px;border-radius:20px;background:rgba(255,255,255,.4);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.55);color:#2b2440}
+  .site.night .contact-note{background:rgba(34,31,54,.5);border-color:rgba(255,255,255,.18);color:#f3eefc}
+  .site .contact-email-row{justify-content:flex-start;flex-wrap:nowrap}
+  .site .contact-email-row .email{padding:13px 18px;border:1px solid rgba(255,255,255,.55);border-radius:20px;background:rgba(255,255,255,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);text-decoration:none;font-size:18px}
+  .site.night .contact-email-row .email{background:rgba(34,31,54,.5);border-color:rgba(255,255,255,.2);color:#f3eefc}
+  .site .copy-email{background:rgba(130,96,213,.92);border-color:transparent;color:#fff;box-shadow:0 8px 20px rgba(75,58,134,.3)}
+  .site .copy-email:hover,.site .copy-email:focus-visible{background:rgba(110,76,200,.96)}
+  .site.page-contact #contact .page-scroll .contact-links{display:flex!important;flex-wrap:wrap;gap:10px;justify-content:flex-start}
+  .site.page-contact #contact .page-scroll .contact-links a{width:auto!important;min-width:0!important;height:auto!important;min-height:48px!important;padding:0 18px!important;gap:8px!important;border-radius:999px!important;justify-content:center;text-decoration:none!important;border:1px solid rgba(255,255,255,.55)!important;background:rgba(255,255,255,.45)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#2b2440}
+  .site.page-contact #contact .page-scroll .contact-links a>span{display:inline!important;font-size:14px;font-weight:600;text-decoration:none!important}
+  .site.page-contact #contact .page-scroll .contact-links a:hover,.site.page-contact #contact .page-scroll .contact-links a:focus-visible{transform:none;background:rgba(255,255,255,.7)!important}
+  .site.night.page-contact #contact .page-scroll .contact-links a{background:rgba(34,31,54,.5)!important;border-color:rgba(255,255,255,.2)!important;color:#f3eefc}
+  .site .contact-education{margin:0!important;width:min(100%,460px)}
+}
+
+/* Projects: give the free-hosting note room and enough contrast */
+.showcase-note{margin:18px 0 0!important;font-size:13px!important;line-height:1.45;opacity:.88!important;max-width:560px}
+.showcase-stack-groups{margin-bottom:0}
+
+
+/* About (desktop): both cards share one fixed height. The role details scroll
+   inside the right card while Previous/Next stay pinned at its bottom. */
+@media (min-width:901px){
+  .site.page-about .about-experience{height:clamp(600px,calc(100vh - 200px),820px)!important;align-items:stretch!important}
+  .site.page-about .experience-list-panel{height:100%!important;min-height:0!important}
+  .site.page-about .experience-list-scroll{overflow-y:auto!important;flex:1 1 auto!important;min-height:0!important;max-height:none!important}
+  .site.page-about .experience-detail{display:flex!important;flex-direction:column;height:100%!important;max-height:none!important;min-height:0!important}
+  .site.page-about .experience-detail-scroll{flex:1 1 auto;min-height:0;height:auto!important;max-height:none!important;overflow-y:auto!important}
+  .site.page-about .experience-detail-footer{flex:none;position:relative;z-index:1;padding:12px 30px 18px;border-top:1px solid rgba(73,48,120,.16);background:linear-gradient(to top,rgba(255,255,255,.28),rgba(255,255,255,0))}
+  .site.night.page-about .experience-detail-footer{border-top-color:rgba(236,231,249,.18);background:linear-gradient(to top,rgba(255,255,255,.06),rgba(255,255,255,0))}
+  .site.page-about .experience-detail-footer .experience-stepper{margin:0!important;padding:0!important;border-top:0!important}
+}
+@media (max-width:900px){
+  .site.page-about .experience-detail-footer{padding:0 18px 18px}
+}
+
+/* About: Tools & technologies uses the full content width with three columns of groups */
+@media (min-width:901px){
+  .site.page-about .tools-section{width:100%!important;max-width:none!important;align-self:stretch;padding:34px 36px 36px!important}
+  .site.page-about .tools-section .tools-intro{max-width:720px}
+  .site.page-about .tools-section .tool-groups{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:30px 36px!important;align-items:start}
+  .site.page-about .tools-section .tool-groups h4{font-size:15px;margin-bottom:10px;color:var(--quality-text)}
+  .site.page-about .tools-section li{font-size:13.5px!important;min-height:36px}
+}
+@media (min-width:901px) and (max-width:1180px){
+  .site.page-about .tools-section .tool-groups{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+
+/* About: Tools & technologies as frosted glass, matching the experience cards */
+.site.page-about .tools-section{
+  background:linear-gradient(145deg,rgba(255,255,255,.4),rgba(255,255,255,.18))!important;
+  border:1px solid rgba(255,255,255,.62)!important;
+  backdrop-filter:blur(20px) saturate(150%)!important;
+  -webkit-backdrop-filter:blur(20px) saturate(150%)!important;
+  box-shadow:0 12px 35px rgba(39,31,66,.14),inset 0 1px 0 rgba(255,255,255,.7),inset 0 -2px 7px rgba(39,31,66,.06)!important;
+}
+.site.page-about .tools-section li{
+  background:rgba(255,255,255,.4)!important;
+  border-color:rgba(255,255,255,.6)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55);
+}
+.site.night.page-about .tools-section{
+  background:linear-gradient(145deg,rgba(57,54,78,.55),rgba(42,40,61,.34))!important;
+  border-color:rgba(236,231,249,.24)!important;
+  box-shadow:0 12px 35px rgba(8,8,22,.26),inset 0 1px 0 rgba(255,255,255,.14),inset 0 -2px 7px rgba(8,8,22,.16)!important;
+}
+.site.night.page-about .tools-section li{
+  background:rgba(255,255,255,.09)!important;
+  border-color:rgba(236,231,249,.2)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
+}
+
+/* Contact (desktop): larger controls, column centred vertically */
+@media (min-width:761px){
+  .site.page-contact>#contact>.page-scroll{justify-content:safe center!important;gap:22px!important;padding-top:110px!important;padding-bottom:70px!important}
+  .site.page-contact>#contact>.page-scroll>*{max-width:700px}
+  .site .contact-note{padding:12px 20px;font-size:15px;border-radius:22px}
+  .site .contact-note .availability-chip{font-size:13px;padding:6px 13px}
+  .site .contact-email-row{gap:14px}
+  .site .contact-email-row .email{padding:16px 24px;font-size:22px;border-radius:24px}
+  .site .copy-email{min-height:58px;padding:0 26px;font-size:15px}
+  .site.page-contact #contact .page-scroll .contact-links{gap:12px}
+  .site.page-contact #contact .page-scroll .contact-links a{min-height:54px!important;padding:0 22px!important;gap:10px!important}
+  .site.page-contact #contact .page-scroll .contact-links a>span{font-size:15px}
+  .site.page-contact #contact .page-scroll .contact-links a .contact-brand-logo{width:24px;height:24px}
+  .site .contact-education{width:min(100%,560px);padding:18px 24px;gap:16px;border-radius:26px}
+  .site .contact-education-icon{width:54px;height:54px}
+  .site .contact-education-text strong{font-size:18px}
+  .site .contact-education-text span{font-size:14px}
+  .site .contact-education-text small{font-size:12px}
+}

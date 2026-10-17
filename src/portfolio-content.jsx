@@ -5,7 +5,7 @@ import { getBrandIconSources } from './brand-icons';
 export const toolGroups = {
   Frontend: [['HTML', 'html5'], ['CSS', 'css3'], ['JavaScript', 'javascript'], ['React', 'react'], ['Next.js', 'nextdotjs'], ['Tailwind CSS', 'tailwindcss'], ['Vite', 'vite'], ['Blazor', 'blazor'], ['Chart.js', 'chartdotjs']],
   Backend: [['Node.js', 'nodedotjs'], ['Express.js', 'express'], ['Python', 'python'], ['C#', 'csharp'], ['ASP.NET Core', 'dotnet'], ['.NET 10', 'dotnet']],
-  'APIs & services': [['REST APIs', null], ['GraphQL', 'graphql'], ['Swagger / OpenAPI', 'swagger'], ['Supabase', 'supabase'], ['WDD330 API', null]],
+  'APIs & services': [['REST APIs', null], ['GraphQL', 'graphql'], ['Swagger / OpenAPI', 'swagger'], ['Supabase', 'supabase']],
   'Database / data': [['MongoDB', 'mongodb'], ['MongoDB Atlas', 'mongodb'], ['PostgreSQL', 'postgresql'], ['MySQL', 'mysql'], ['Neo4j', 'neo4j'], ['LocalStorage', null]],
   'Platforms & commerce': [['Shopify', 'shopify'], ['WordPress', 'wordpress'], ['Elementor', 'elementor'], ['Systeme.io', null], ['Wix', 'wix']],
   'Design / product': [['Figma', 'figma']],

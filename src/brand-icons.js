@@ -1,4 +1,5 @@
-const devicon = (name, file = `${name}-original.svg`) => `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${file}`;
+// Logos are bundled in public/icons/devicon so the site does not depend on a CDN.
+const devicon = (name, file = `${name}-original.svg`) => `/icons/devicon/${file}`;
 const simple = (slug, color) => `https://cdn.simpleicons.org/${slug}${color ? `/${color}` : ''}`;
 
 // Colored Devicon artwork is preferred for developer technologies. Simple Icons
@@ -24,7 +25,7 @@ export const brandIconSources = {
   'Chart.js': [devicon('chartjs')],
   '.NET': [devicon('dotnetcore'), simple('dotnet', '512BD4')],
   'ASP.NET Core': [devicon('dotnetcore'), simple('dotnet', '512BD4')],
-  GraphQL: [devicon('graphql')],
+  GraphQL: [devicon('graphql', 'graphql-plain.svg')],
   'Swagger / OpenAPI': [devicon('swagger')],
   Supabase: [devicon('supabase'), simple('supabase', '3ECF8E')],
   MongoDB: [devicon('mongodb')],
@@ -32,7 +33,7 @@ export const brandIconSources = {
   PostgreSQL: [devicon('postgresql')],
   MySQL: [devicon('mysql')],
   Neo4j: [devicon('neo4j')],
-  Shopify: [devicon('shopify')],
+  Shopify: [simple('shopify', '7AB55C')],
   WordPress: [devicon('wordpress')],
   Elementor: [simple('elementor', '92003B')],
   Wix: [simple('wix', '0C6EFC')],
