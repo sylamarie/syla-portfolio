@@ -3774,3 +3774,28 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
   .site.page-home .brand-orb,
   .site.page-home .social-card{display:none!important}
 }
+
+/* Home on landscape tablets and laptops: compact so the whole composition fits one screen */
+@media (min-width:761px) and (max-height:860px) and (orientation:landscape){
+  .site.page-home .reference-hero>.hero{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    align-items:stretch!important;
+    gap:16px!important;
+    padding-top:clamp(72px,11dvh,96px)!important;
+    padding-bottom:clamp(16px,3dvh,30px)!important;
+  }
+  .site.page-home .hero-copy{gap:0!important}
+  .site.page-home .hero-copy h1{font-size:clamp(38px,10.5dvh,84px)!important;line-height:.95!important}
+  .site.page-home .hero-copy .intro{display:none!important}
+  .site.page-home .intro-card,
+  .site.page-home .glass-card{padding:clamp(16px,2.6dvh,24px) clamp(18px,2.4vw,28px)!important}
+  .site.page-home .intro-card h2,
+  .site.page-home .glass-card h2{font-size:clamp(18px,2.8dvh,24px)!important}
+  .site.page-home .intro-card p,
+  .site.page-home .glass-card>p{font-size:clamp(13px,1.9dvh,15px)!important;line-height:1.4!important}
+}
+
+/* Equal, even corners on the two Home cards at every size */
+.site.page-home .intro-card,
+.site.page-home .glass-card{border-radius:36px!important}
+@media (max-width:760px){.site.page-home .intro-card,.site.page-home .glass-card{border-radius:28px!important}}
