@@ -19,7 +19,7 @@
 .site.night::after{opacity:.32;mix-blend-mode:screen;background:radial-gradient(circle at 50% 25%,transparent 38%,rgba(6,8,24,.48) 100%)}
 .site .page-scroll,.site .about-scroll-content,.site .credential-scroll{scroll-behavior:smooth;scroll-padding-top:120px}
 .site .page-scroll::before,.site .about-scroll-content::before,.site .credential-scroll::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent 22%,transparent 78%,rgba(18,14,38,.08));z-index:-1}
-.site.page-projects #projects .section-heading,.site.page-services #services .eyebrow,.site.page-services #services .service-layout,.site.page-about #about .about-scroll-content>*,.site.page-contact #contact .page-scroll>*{animation:cinematic-enter 650ms var(--motion-ease) both}
+.site.page-projects #projects .section-heading,.site.page-services #services .eyebrow,.site.page-services #services .service-layout,.site.page-about #about .about-scroll-content>*,.site.page-contact #contact .page-scroll>*{animation:cinematic-enter 650ms var(--motion-ease) backwards}
 .site.page-projects #projects .project:nth-child(2),.site.page-services #services .service:nth-child(2),.site.page-about #about .about-scroll-content>*:nth-child(2),.site.page-contact #contact .page-scroll>*:nth-child(2){animation-delay:90ms}
 .site.page-projects #projects .project:nth-child(3),.site.page-services #services .service:nth-child(3),.site.page-about #about .about-scroll-content>*:nth-child(3),.site.page-contact #contact .page-scroll>*:nth-child(3){animation-delay:160ms}
 .site.page-projects #projects .project,.site.page-about .tools-section,.site.page-contact .contact-orb{transition:transform 350ms var(--motion-ease),background-color 350ms var(--motion-ease),border-color 350ms var(--motion-ease),box-shadow 350ms var(--motion-ease)}
@@ -29,7 +29,7 @@
 @keyframes cinematic-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 html[data-theme=dark]{--quality-text:#f3eff5;--quality-body:#ded7e7;--quality-muted:#c7bbd6;--quality-surface:rgba(43,40,61,.88);--quality-border:rgba(226,217,244,.25);--quality-accent:#d0bfe8}
 .site .project,.tools-section,.credential-card{color:var(--quality-text);background:var(--quality-surface);border:1px solid var(--quality-border)}
-.site .project,.tools-section,.credential-card,.site.page-about .about-intro,.site.page-about .about-experience{background:linear-gradient(135deg,rgba(250,248,253,.86),rgba(238,236,248,.68));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.68);box-shadow:0 14px 34px rgba(39,31,66,.11)}
+.site .project,.tools-section,.credential-card,.site.page-about .about-intro{background:linear-gradient(135deg,rgba(250,248,253,.86),rgba(238,236,248,.68));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.68);box-shadow:0 14px 34px rgba(39,31,66,.11)}
 .site .project{position:relative;overflow:hidden;border-radius:54px 26px 62px 30px / 34px 54px 38px 64px}
 .site .project:nth-child(2n){border-radius:28px 62px 30px 58px / 58px 34px 62px 30px}
 .site .project:nth-child(3n){border-radius:64px 30px 46px 28px / 28px 62px 34px 58px}
@@ -1028,7 +1028,7 @@ html[data-theme=dark]{
 /* Smooth hash-page changes without cross-fading the entire shell. Keeping the
    animation on the incoming section prevents the previous page's background
    image from appearing over the new page. */
-@keyframes page-enter-soft{from{opacity:0;transform:translateY(12px);filter:blur(2px)}to{opacity:1;transform:none;filter:none}}
+@keyframes page-enter-soft{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .site.page-home .reference-hero,
 .site.page-projects>#projects,
 .site.page-services>#services,
@@ -1036,7 +1036,7 @@ html[data-theme=dark]{
 .site.page-credentials>#credentials,
 .site.page-contact>#contact,
 .site.page-home>footer{
-  animation:page-enter-soft 520ms var(--motion-ease) both;
+  animation:page-enter-soft 520ms var(--motion-ease) backwards;
 }
 @media(prefers-reduced-motion:reduce){
   .site.page-home .reference-hero,
@@ -3461,3 +3461,242 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
 @media (max-width:760px){
   .site.page-contact>#contact>.page-scroll{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
 }
+
+/* About: no connector triangle between the cards, and no blurred photo behind them.
+   Both cards get a clean, mostly solid surface so the text stays crisp. */
+.site.page-about .experience-detail.has-selection::before{display:none!important;content:none!important}
+@media (min-width:901px){
+  .site.page-about .experience-detail.has-selection{overflow:hidden!important}
+  .site.page-about .experience-list-panel .about-experience-list li .experience-select,
+  .site.page-about .experience-list-panel .about-experience-list li.is-selected .experience-select{
+    width:100%!important;margin-right:0!important;padding-left:12px!important;padding-right:12px!important;
+  }
+}
+.site.page-about .experience-list-panel,
+.site.page-about .experience-detail{
+  backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+  background:rgba(250,248,253,.92)!important;
+  border:1px solid rgba(255,255,255,.7)!important;
+  box-shadow:0 12px 35px rgba(39,31,66,.14),inset 0 1px 0 rgba(255,255,255,.8)!important;
+}
+.site.night.page-about .experience-list-panel,
+.site.night.page-about .experience-detail{
+  background:rgba(36,34,54,.94)!important;
+  border-color:rgba(236,231,249,.2)!important;
+  box-shadow:0 12px 35px rgba(8,8,22,.34),inset 0 1px 0 rgba(255,255,255,.1)!important;
+}
+
+/* About: the wrapper around the two experience cards is only a layout box.
+   It must not blur anything, or a square patch shows behind the rounded corners. */
+.site.page-about .about-experience,
+.site.night.page-about .about-experience{
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  border:0!important;
+}
+
+/* About: the wrapper's decorative highlight layer drew a square patch behind the cards' rounded corners */
+.site.page-about .about-experience::after,
+.site.page-about .about-experience::before{display:none!important;content:none!important}
+
+/* About: both experience cards share the same generous rounded corners */
+.site.page-about .experience-list-panel,
+.site.page-about .experience-detail{
+  border-radius:40px!important;
+}
+@media (max-width:900px){
+  .site.page-about .experience-list-panel,
+  .site.page-about .experience-detail{border-radius:28px!important}
+}
+
+/* About: Apple-style frosted glass for both experience cards */
+.site.page-about .experience-list-panel,
+.site.page-about .experience-detail{
+  background:linear-gradient(145deg,rgba(255,255,255,.46),rgba(255,255,255,.22))!important;
+  -webkit-backdrop-filter:blur(26px) saturate(180%)!important;
+  backdrop-filter:blur(26px) saturate(180%)!important;
+  border:1px solid rgba(255,255,255,.62)!important;
+  box-shadow:0 14px 40px rgba(31,26,56,.16),inset 0 1px 0 rgba(255,255,255,.75),inset 0 -1px 0 rgba(255,255,255,.18)!important;
+}
+.site.night.page-about .experience-list-panel,
+.site.night.page-about .experience-detail{
+  background:linear-gradient(145deg,rgba(70,66,98,.5),rgba(34,32,54,.36))!important;
+  -webkit-backdrop-filter:blur(26px) saturate(165%)!important;
+  backdrop-filter:blur(26px) saturate(165%)!important;
+  border:1px solid rgba(236,231,249,.26)!important;
+  box-shadow:0 14px 40px rgba(6,5,18,.42),inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(255,255,255,.05)!important;
+}
+/* the pinned footer inside the detail card stays clear, not a second panel */
+.site.page-about .experience-detail-footer{background:transparent!important}
+
+/* Responsive polish: comfortable touch targets without changing how things look.
+   The visible controls keep their size; an invisible, larger hit area surrounds them. */
+.theme-option{position:relative}
+.theme-option::after{content:"";position:absolute;inset:-8px}
+.showcase-controls button,.project-preview-controls>div button{position:relative}
+.showcase-controls button::after,.project-preview-controls>div button::after{content:"";position:absolute;inset:-16px -6px}
+.site.page-about .experience-back{min-height:40px;padding:8px 14px 8px 10px}
+.text-link{display:inline-flex;align-items:center;min-height:44px}
+
+/* Tiny phones: keep the email on one line instead of breaking in the middle of a word */
+@media (max-width:760px){
+  .site .contact-email-row .email{font-size:clamp(11.5px,3.9vw,17px)}
+  .site .contact-email-row .email span{overflow-wrap:normal;word-break:normal;white-space:nowrap}
+}
+
+/* Labels that wrap in narrow cards wrap evenly instead of leaving one word alone */
+.availability-chip,.intro-card-breakdown,.showcase-note{text-wrap:balance}
+
+/* Short, wide screens (phones held sideways, small landscape windows):
+   compact side menu, smaller headline, and a taller Home page that scrolls so the cards
+   do not pile on top of each other. */
+@media (min-width:761px) and (max-height:520px){
+  .site>.topbar{height:64px}
+  .site>.topbar .top-pill{min-height:42px;padding:9px 16px}
+  .site>.topbar .top-inset{height:50px;padding:5px 14px}
+  .site>.rail{top:76px!important;bottom:10px!important;gap:6px}
+  .site>.rail nav{gap:5px!important}
+  .site>.rail nav a{width:34px!important;height:34px!important;min-height:34px!important;min-width:34px!important}
+  .site>.rail .theme-switch{width:34px!important;height:56px!important}
+  .site>.rail .rail-bottom{margin-top:6px!important;padding:8px 4px!important}
+  .site.page-home .reference-hero>.hero{min-height:620px!important}
+  .site.page-home .hero-copy h1{font-size:clamp(34px,11vh,52px)!important;top:16%!important}
+  .site.page-projects>#projects>.page-scroll,.site.page-services>#services>.page-scroll,.site.page-contact>#contact>.page-scroll{padding-top:84px!important;padding-left:104px!important}
+  .site.page-about>#about>.about-scroll-content{padding-top:84px!important;padding-left:104px!important}
+}
+
+/* Very short screens: the Home intro paragraph repeats the name card, and it collides with the cards */
+@media (min-width:761px) and (max-height:520px){
+  .site.page-home .hero-copy .intro{display:none!important}
+}
+
+/* Services: every card shares the same, even rounded corners */
+.site .service,
+.site .service:nth-child(n),
+.site.page-services .services-list .service,
+.site.page-services .services-list .service:nth-child(n){border-radius:36px!important}
+.site.page-services .services-proof{border-radius:36px!important}
+.site.page-services .services-marquee{border-radius:28px!important}
+@media (max-width:760px){
+  .site .service,
+  .site .service:nth-child(n),
+  .site.page-services .services-list .service,
+  .site.page-services .services-list .service:nth-child(n),
+  .site.page-services .services-proof{border-radius:26px!important}
+  .site.page-services .services-marquee{border-radius:22px!important}
+}
+
+/* Services: Apple-style frosted glass for the service cards and the three-step panel */
+.site .service,
+.site.page-services .services-list .service,
+.site.page-services .services-proof{
+  background:linear-gradient(145deg,rgba(255,255,255,.46),rgba(255,255,255,.2))!important;
+  -webkit-backdrop-filter:blur(26px) saturate(180%)!important;
+  backdrop-filter:blur(26px) saturate(180%)!important;
+  border:1px solid rgba(255,255,255,.62)!important;
+  box-shadow:0 14px 40px rgba(31,26,56,.16),inset 0 1px 0 rgba(255,255,255,.75),inset 0 -1px 0 rgba(255,255,255,.16)!important;
+}
+.site.night .service,
+.site.night.page-services .services-list .service,
+.site.night.page-services .services-proof{
+  background:linear-gradient(145deg,rgba(70,66,98,.5),rgba(34,32,54,.34))!important;
+  -webkit-backdrop-filter:blur(26px) saturate(165%)!important;
+  backdrop-filter:blur(26px) saturate(165%)!important;
+  border:1px solid rgba(236,231,249,.26)!important;
+  box-shadow:0 14px 40px rgba(6,5,18,.42),inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(255,255,255,.05)!important;
+}
+/* small chips and tool icons inside the cards become little glass pills too */
+.site.page-services .service-tags span,
+.site.page-services .service-tool{
+  background:rgba(255,255,255,.4)!important;
+  border-color:rgba(255,255,255,.6)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55);
+}
+.site.night.page-services .service-tags span,
+.site.night.page-services .service-tool{
+  background:rgba(255,255,255,.09)!important;
+  border-color:rgba(236,231,249,.2)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
+}
+
+/* About cards: crisper glass and a frosted footer so scrolling text never runs under the buttons */
+.site.page-about .experience-list-panel,
+.site.page-about .experience-detail{
+  background:linear-gradient(145deg,rgba(255,255,255,.58),rgba(255,255,255,.34))!important;
+  -webkit-backdrop-filter:blur(34px) saturate(180%)!important;
+  backdrop-filter:blur(34px) saturate(180%)!important;
+}
+.site.night.page-about .experience-list-panel,
+.site.night.page-about .experience-detail{
+  background:linear-gradient(145deg,rgba(70,66,98,.62),rgba(34,32,54,.48))!important;
+  -webkit-backdrop-filter:blur(34px) saturate(165%)!important;
+  backdrop-filter:blur(34px) saturate(165%)!important;
+}
+@media (min-width:901px){
+  .site.page-about .experience-detail-footer{
+    background:rgba(255,255,255,.55)!important;
+    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border-radius:0 0 40px 40px;
+  }
+  .site.night.page-about .experience-detail-footer{background:rgba(34,32,54,.6)!important}
+}
+
+/* About on narrower desktop windows: give the role list room and stack the dates under the title,
+   so titles no longer break one word per line */
+@media (min-width:901px) and (max-width:1180px){
+  .site.page-about .about-experience{grid-template-columns:minmax(300px,.95fr) minmax(0,1.05fr)!important;column-gap:24px!important}
+  .site.page-about .experience-list-panel .about-experience-list li .experience-select{flex-direction:column!important;align-items:flex-start!important;gap:4px!important}
+  .site.page-about .experience-list-panel .about-experience-list li .experience-select time{white-space:normal!important}
+  .site.page-about .experience-list-panel .about-experience-list li .experience-select strong{white-space:normal}
+}
+/* Glass pages: round the page with border-radius instead of clip-path.
+   clip-path (like filter) creates a "backdrop root", which stops the cards' glass from blurring the photo. */
+@media (min-width:761px){
+  .site.page-projects>#projects,
+  .site.page-services>#services,
+  .site.page-about>#about,
+  .site.page-contact>#contact{clip-path:none!important;border-radius:64px!important;overflow-x:hidden}
+}
+@media (max-width:760px){
+  .site.page-projects>#projects,
+  .site.page-services>#services,
+  .site.page-about>#about,
+  .site.page-contact>#contact{clip-path:none!important;border-radius:32px!important}
+}
+
+/* keep the 6px frame gap that the old clip-path produced */
+@media (min-width:761px){
+  .site.page-projects>#projects,
+  .site.page-services>#services,
+  .site.page-about>#about,
+  .site.page-contact>#contact{border:6px solid transparent!important;background-clip:padding-box!important;border-radius:70px!important}
+}
+
+@media (min-width:901px) and (max-width:1180px){
+  .site.page-about .experience-list-panel .about-experience-list li .experience-select{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:4px!important}
+  .site.page-about .experience-list-panel .about-experience-list li .experience-select>div{width:100%}
+}
+
+@media (min-width:901px) and (max-width:1180px){
+  .site.page-about .experience-list-panel .about-experience-list li .experience-select time{position:static!important;order:2;margin:2px 0 0;display:block}
+  .site.page-about .experience-list-panel .about-experience-list li .experience-select strong{max-width:none!important}
+}
+
+/* Theme toggle: its holder box must never paint a background (it showed as a dark square on tablets) */
+.site>.rail .rail-bottom,
+.site.night>.rail .rail-bottom,
+.site:not(.night)>.rail .rail-bottom{
+  background:transparent!important;
+  box-shadow:none!important;
+  border:0!important;
+  border-radius:0!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+
+/* Tool icon rows inside the role details wrap onto a second line instead of being cut off */
+.site.page-about .experience-detail-tools,
+.site.page-about .experience-tool-line,
+.site.page-about .experience-fullstack-tool-line{display:flex!important;flex-wrap:wrap!important;overflow:visible!important;max-width:100%}

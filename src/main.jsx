@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowUpRight, Check, Copy, GraduationCap, BriefcaseBusiness, Code2, HardDrive, Mail, Moon, Send, Sun, UserRound, Home, MapPin, Download, ChevronDown, ChevronLeft, ChevronRight, Layers, Images, X } from 'lucide-react';
 import './styles.css';
@@ -129,7 +129,7 @@ function LeftNavigation({ activePage, dark, setDark }) {
 function ProjectStack({ project }) {
   const covers = project.screenshots.map(site => site[0]);
   return <span className="project-stack" aria-hidden="true">
-    <span className="project-stack-cards">{covers.map((source, index) => <img key={source} src={`/projects/${source}`} alt="" style={{'--stack-index': index}} loading="lazy" />)}</span>
+    <span className="project-stack-cards">{covers.slice(0, 4).map((source, index) => <img key={source} src={`/projects/${source}`} alt="" style={{'--stack-index': index}} loading="lazy" />)}</span>
     <span className="project-stack-badge"><Layers size={14}/> {covers.length} websites</span>
   </span>;
 }
@@ -295,7 +295,6 @@ function App() {
   const experienceListRef = useRef(null);
   const experienceListScrollRef = useRef(null);
   const experienceDetailRef = useRef(null);
-  const [experiencePointerY, setExperiencePointerY] = useState(null);
   useEffect(() => {
     const names = {home:'Home', projects:'Projects', services:'Services', about:'About', credentials:'Education & Credentials', contact:'Contact'};
     if (!names[page]) { window.location.hash = 'home'; return; }
@@ -326,27 +325,6 @@ function App() {
     if (selectedExperience === null) window.localStorage.removeItem('syla-selected-experience');
     else window.localStorage.setItem('syla-selected-experience', String(selectedExperience));
   }, [selectedExperience]);
-  useLayoutEffect(() => {
-    const list = experienceListRef.current;
-    const listScroll = experienceListScrollRef.current;
-    const detail = experienceDetailRef.current;
-    const row = selectedExperience === null ? null : list?.querySelector('.is-selected');
-    if (!list || !listScroll || !detail || !row || window.innerWidth <= 900) { setExperiencePointerY(null); return undefined; }
-    const updatePointer = () => {
-      const detailRect = detail.getBoundingClientRect();
-      const rowRect = row.getBoundingClientRect();
-      setExperiencePointerY(rowRect.top + rowRect.height / 2 - detailRect.top);
-    };
-    updatePointer();
-    const observer = new ResizeObserver(updatePointer);
-    observer.observe(list);
-    observer.observe(listScroll);
-    observer.observe(detail);
-    observer.observe(row);
-    listScroll.addEventListener('scroll', updatePointer, { passive: true });
-    window.addEventListener('resize', updatePointer);
-    return () => { observer.disconnect(); listScroll.removeEventListener('scroll', updatePointer); window.removeEventListener('resize', updatePointer); };
-  }, [selectedExperience, page]);
   const selected = selectedExperience === null ? null : workExperiences[selectedExperience];
   // On phones the detail sits below the list, so bring it into view after a pick.
   const scrollAfterPick = useRef(false);
@@ -419,7 +397,7 @@ function App() {
               </ol>
             </div>
           </div>
-          <article id="experience-detail-panel" ref={experienceDetailRef} key={selected?.number || 'empty'} className={`experience-detail ${selected ? 'has-selection' : 'is-empty'}`} style={experiencePointerY === null ? undefined : {'--experience-pointer-y': `${experiencePointerY}px`}} aria-live="polite">
+          <article id="experience-detail-panel" ref={experienceDetailRef} key={selected?.number || 'empty'} className={`experience-detail ${selected ? 'has-selection' : 'is-empty'}`} aria-live="polite">
             <div className="experience-detail-scroll">
               {selected ? <>
                 <div className="experience-detail-topbar">
