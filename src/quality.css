@@ -112,7 +112,7 @@ html[data-theme=dark]{--quality-text:#f3eff5;--quality-body:#ded7e7;--quality-mu
 @media(hover:hover){.project:hover .project-visual img{transform:scale(1.015)}.credential-card:hover{border-color:var(--quality-accent)}.tools-section li:hover{background:var(--quality-border)}.service:hover{background:var(--quality-surface)}.contact-links a:hover{color:var(--quality-accent)}}
 @media(max-width:1100px){.site .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.site .section-heading{display:block}.site .section-heading>p:last-child{max-width:660px}.site .service-layout{display:block}.site .service-layout>div{margin-top:32px}.site .service{padding:24px 0}.site.page-about>#about>.about-scroll-content{padding-left:110px;padding-right:32px}}
 @media(max-width:760px){
- .site.page-home .reference-hero:before,.site.page-home .reference-hero:after{position:fixed;inset:0;min-height:100vh;height:100vh;clip-path:inset(10px round 35px);background-attachment:scroll}
+ .site.page-home .reference-hero:before,.site.page-home .reference-hero:after{position:fixed;inset:0;min-height:100dvh;height:100dvh;clip-path:inset(10px round 35px);background-attachment:scroll}
  .site>.rail{left:10px;right:10px;bottom:10px;width:auto;height:72px;padding:6px;gap:6px;align-items:center;background:var(--quality-surface)}
  .site>.rail nav{gap:1px;justify-content:space-between;flex:1;min-width:0}.site>.rail nav a{width:40px;min-width:36px;height:44px;min-height:44px}.site>.rail nav span{display:none}
  .site>.rail .rail-settings{display:none}.site>.rail .rail-bottom{display:flex;margin:0;padding:0;background:transparent;border-radius:0}.site>.rail .rail-bottom>a{display:none}
@@ -329,7 +329,7 @@ html[data-theme=dark]{--quality-text:#f3eff5;--quality-body:#ded7e7;--quality-mu
 
 @media (max-width:760px){
   html,body,#root{min-width:0;max-width:100%;overflow-x:hidden}
-  .site{inset:10px;height:calc(100svh - 20px);border-radius:32px}
+  .site{inset:10px;height:calc(100dvh - 20px);border-radius:32px}
   .site>.topbar{left:18px;right:18px;height:auto;gap:12px}
   .site>.topbar .top-pill{min-width:0;min-height:42px;padding:10px 13px;font-size:14px;gap:8px;white-space:nowrap}
   .site>.topbar .top-pill svg{width:15px;height:15px}
@@ -548,7 +548,7 @@ html[data-theme=dark]{--quality-text:#f3eff5;--quality-body:#ded7e7;--quality-mu
 @media (max-width:760px){
   html,body,#root{width:100%;min-width:0;max-width:100%;overflow-x:hidden}
   body{font-size:16px}
-  .site{inset:8px;height:calc(100svh - 16px);border-radius:30px}
+  .site{inset:8px;height:calc(100dvh - 16px);border-radius:30px}
   .frame-outline{inset:3px;border-width:3px;border-radius:27px}
   .site>.topbar{left:14px;right:14px;top:0;height:64px;gap:8px;align-items:flex-start}
   .site>.topbar .top-pill{flex:0 1 auto;min-width:0;min-height:40px;margin-top:8px;padding:9px 11px;font-size:13px;line-height:1;gap:6px}
@@ -648,7 +648,7 @@ html[data-theme=dark]{--quality-text:#f3eff5;--quality-body:#ded7e7;--quality-mu
    letting the rail, cards, or long copy compete for the same space. */
 @media (min-width:761px) and (max-width:1100px){
   html,body,#root{min-width:0;max-width:100%;overflow-x:hidden}
-  .site{inset:12px;height:calc(100svh - 24px);border-radius:54px}
+  .site{inset:12px;height:calc(100dvh - 24px);border-radius:54px}
   .frame-outline{inset:4px;border-width:4px;border-radius:50px}
   .site>.topbar{left:24px;right:24px;height:76px;gap:14px}
   .site>.topbar .top-pill{min-width:124px;min-height:46px;padding:11px 16px;font-size:14px}
@@ -717,7 +717,7 @@ html[data-theme=dark]{--quality-text:#f3eff5;--quality-body:#ded7e7;--quality-mu
    replaced by a calm vertical reading flow, while landscape tablets keep the
    desktop-style composition above. */
 @media (min-width:761px) and (max-width:1100px) and (orientation:portrait){
-  .site{inset:10px;height:calc(100svh - 20px);border-radius:42px}
+  .site{inset:10px;height:calc(100dvh - 20px);border-radius:42px}
   .frame-outline{inset:4px;border-width:4px;border-radius:38px}
   .site>.topbar{left:24px;right:24px;height:70px}
   .site>.topbar .top-inset{display:none}
@@ -1141,8 +1141,8 @@ html[data-theme=dark]{
   .site.page-home .reference-hero:after{
     position:fixed;
     inset:0;
-    height:100vh;
-    min-height:100vh;
+    height:100dvh;
+    min-height:100dvh;
     background-attachment:fixed;
     clip-path:inset(10px round 70px);
   }
@@ -3381,7 +3381,7 @@ button.showcase-link{border:0;font:inherit;font-weight:600;cursor:pointer}
 /* About (desktop): both cards share one fixed height. The role details scroll
    inside the right card while Previous/Next stay pinned at its bottom. */
 @media (min-width:901px){
-  .site.page-about .about-experience{height:clamp(600px,calc(100vh - 200px),820px)!important;align-items:stretch!important}
+  .site.page-about .about-experience{height:clamp(600px,calc(100dvh - 200px),820px)!important;align-items:stretch!important}
   .site.page-about .experience-list-panel{height:100%!important;min-height:0!important}
   .site.page-about .experience-list-scroll{overflow-y:auto!important;flex:1 1 auto!important;min-height:0!important;max-height:none!important}
   .site.page-about .experience-detail{display:flex!important;flex-direction:column;height:100%!important;max-height:none!important;min-height:0!important}
@@ -3700,3 +3700,77 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
 .site.page-about .experience-detail-tools,
 .site.page-about .experience-tool-line,
 .site.page-about .experience-fullstack-tool-line{display:flex!important;flex-wrap:wrap!important;overflow:visible!important;max-width:100%}
+
+/* ============================================================
+   Page changes: no fade, slide or zoom. Content is simply there,
+   and the cards' glass is on from the very first frame.
+   (Animated parents stop the browser from blurring the photo behind the glass.)
+   ============================================================ */
+.site,
+.site.page-home .reference-hero,
+.site.page-home>footer,
+.site.page-projects>#projects,
+.site.page-services>#services,
+.site.page-about>#about,
+.site.page-credentials>#credentials,
+.site.page-contact>#contact,
+.site.page-projects #projects .section-heading,
+.site.page-services #services .eyebrow,
+.site.page-services #services .service-layout,
+.site.page-about #about .about-scroll-content>*,
+.site.page-contact #contact .page-scroll>*,
+.site.page-home .hero-copy h1,
+.site.page-home .hero-copy .intro,
+.site.page-home .intro-card,
+.site.page-home .glass-card,
+.site .revealed,
+.site.page-about .experience-detail{
+  animation:none!important;
+  opacity:1!important;
+  translate:none!important;
+}
+
+/* Frame always matches the visible screen (follows the browser's address bar) */
+.site{height:auto!important;min-height:0!important;max-height:none!important}
+
+/* ============================================================
+   Home on tablets and short screens: lay the content out top to bottom,
+   so the title can never end up under the cards at any screen size.
+   ============================================================ */
+@media (min-width:761px) and (max-width:1100px), (min-width:761px) and (max-height:860px){
+  .site.page-home .reference-hero{overflow-y:auto!important;overflow-x:hidden!important}
+  .site.page-home .reference-hero>.hero{
+    position:relative!important;inset:auto!important;
+    display:grid!important;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr))!important;
+    grid-template-rows:1fr!important;
+    align-content:stretch!important;
+    gap:18px!important;
+    width:100%!important;height:auto!important;min-height:100%!important;max-height:none!important;
+    box-sizing:border-box!important;
+    padding:clamp(84px,12dvh,120px) clamp(22px,4vw,64px) clamp(22px,4dvh,44px) clamp(96px,11vw,140px)!important;
+  }
+  .site.page-home .hero-copy{
+    position:static!important;inset:auto!important;transform:none!important;
+    grid-column:1/-1!important;
+    display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+    gap:18px!important;width:auto!important;height:auto!important;margin:0!important;text-align:center!important;
+  }
+  .site.page-home .hero-copy h1{
+    position:static!important;inset:auto!important;transform:none!important;
+    width:auto!important;max-width:100%!important;margin:0!important;
+    font-size:clamp(44px,8.5vw,92px)!important;text-align:center!important;
+  }
+  .site.page-home .hero-copy .intro{
+    position:static!important;inset:auto!important;transform:none!important;
+    width:min(620px,100%)!important;margin:0!important;
+  }
+  .site.page-home .intro-card,
+  .site.page-home .glass-card{
+    position:relative!important;inset:auto!important;transform:none!important;
+    grid-column:auto!important;grid-row:auto!important;
+    width:auto!important;height:auto!important;min-height:0!important;margin:0!important;max-width:none!important;
+  }
+  .site.page-home .brand-orb,
+  .site.page-home .social-card{display:none!important}
+}
