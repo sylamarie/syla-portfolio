@@ -171,31 +171,31 @@ html[data-theme=dark]{--quality-text:#f3eff5;--quality-body:#ded7e7;--quality-mu
   transition:transform 560ms cubic-bezier(.22,.61,.36,1),opacity 560ms cubic-bezier(.22,.61,.36,1),filter 560ms cubic-bezier(.22,.61,.36,1)!important;
   transform-origin:center center;
 }
-.project-showcase .showcase-card.is-left,.project-showcase .showcase-card.slide-next-exit-left,.project-showcase .showcase-card.slide-prev-move-center{transform:translate3d(-76%,0,0) scale(.76) rotate(-3deg)!important;opacity:.42!important;filter:saturate(.65) brightness(.7) blur(1.2px)!important}
-.project-showcase .showcase-card.is-active,.project-showcase .showcase-card.slide-next-move-left,.project-showcase .showcase-card.slide-prev-move-right{transform:translate3d(0,0,0) scale(1) rotate(0)!important;opacity:1!important;filter:none!important;z-index:2}
-.project-showcase .showcase-card.is-right,.project-showcase .showcase-card.slide-next-move-center,.project-showcase .showcase-card.slide-prev-exit-right{transform:translate3d(76%,0,0) scale(.76) rotate(3deg)!important;opacity:.42!important;filter:saturate(.65) brightness(.7) blur(1.2px)!important}
-.project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-exit-left{transform:translate3d(-150%,0,0) scale(.7) rotate(-5deg)!important;opacity:0!important;filter:saturate(.5) brightness(.55) blur(2px)!important;z-index:1}
-.project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-left{transform:translate3d(-76%,0,0) scale(.76) rotate(-3deg)!important;opacity:.42!important;filter:saturate(.65) brightness(.7) blur(1.2px)!important;z-index:2}
-.project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-center{transform:translate3d(0,0,0) scale(1) rotate(0)!important;opacity:1!important;filter:none!important;z-index:3}
-.project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-enter-right{transform:translate3d(76%,0,0) scale(.76) rotate(3deg)!important;opacity:.42!important;filter:saturate(.65) brightness(.7) blur(1.2px)!important;z-index:1}
-.project-showcase .showcase-card.slide-next-enter-right{transform:translate3d(150%,0,0) scale(.7) rotate(5deg)!important;opacity:0!important;filter:saturate(.5) brightness(.55) blur(2px)!important;z-index:1}
-.project-showcase .showcase-card.slide-prev-enter-left{transform:translate3d(-150%,0,0) scale(.7) rotate(-5deg)!important;opacity:0!important;filter:saturate(.5) brightness(.55) blur(2px)!important;z-index:1}
-.project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-enter-left{transform:translate3d(-76%,0,0) scale(.76) rotate(-3deg)!important;opacity:.42!important;filter:saturate(.65) brightness(.7) blur(1.2px)!important;z-index:1}
-.project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-move-center{transform:translate3d(0,0,0) scale(1) rotate(0)!important;opacity:1!important;filter:none!important;z-index:3}
-.project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-move-right{transform:translate3d(76%,0,0) scale(.76) rotate(3deg)!important;opacity:.42!important;filter:saturate(.65) brightness(.7) blur(1.2px)!important;z-index:2}
-.project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-exit-right{transform:translate3d(150%,0,0) scale(.7) rotate(5deg)!important;opacity:0!important;filter:saturate(.5) brightness(.55) blur(2px)!important;z-index:1}
+.project-showcase .showcase-card.is-left,.project-showcase .showcase-card.slide-next-exit-left,.project-showcase .showcase-card.slide-prev-move-center{transform:translate3d(-55%,0,0) scale(.79) rotate(0) rotateY(26deg)!important;opacity:.92!important;filter:saturate(.88) brightness(.8)!important}
+.project-showcase .showcase-card.is-active,.project-showcase .showcase-card.slide-next-move-left,.project-showcase .showcase-card.slide-prev-move-right{transform:translate3d(0,0,0) scale(1) rotate(0) rotateY(0deg)!important;opacity:1!important;filter:none!important;z-index:2}
+.project-showcase .showcase-card.is-right,.project-showcase .showcase-card.slide-next-move-center,.project-showcase .showcase-card.slide-prev-exit-right{transform:translate3d(55%,0,0) scale(.79) rotate(0) rotateY(-26deg)!important;opacity:.92!important;filter:saturate(.88) brightness(.8)!important}
+.project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-exit-left{transform:translate3d(-150%,0,0) scale(.7) rotate(0) rotateY(26deg)!important;opacity:0!important;filter:saturate(.5) brightness(.55) blur(2px)!important;z-index:1}
+.project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-left{transform:translate3d(-55%,0,0) scale(.79) rotate(0) rotateY(26deg)!important;opacity:.92!important;filter:saturate(.88) brightness(.8)!important;z-index:2}
+.project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-center{transform:translate3d(0,0,0) scale(1) rotate(0) rotateY(0deg)!important;opacity:1!important;filter:none!important;z-index:3}
+.project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-enter-right{transform:translate3d(55%,0,0) scale(.79) rotate(0) rotateY(-26deg)!important;opacity:.92!important;filter:saturate(.88) brightness(.8)!important;z-index:1}
+.project-showcase .showcase-card.slide-next-enter-right{transform:translate3d(150%,0,0) scale(.7) rotate(0) rotateY(-26deg)!important;opacity:0!important;filter:saturate(.5) brightness(.55) blur(2px)!important;z-index:1}
+.project-showcase .showcase-card.slide-prev-enter-left{transform:translate3d(-150%,0,0) scale(.7) rotate(0) rotateY(26deg)!important;opacity:0!important;filter:saturate(.5) brightness(.55) blur(2px)!important;z-index:1}
+.project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-enter-left{transform:translate3d(-55%,0,0) scale(.79) rotate(0) rotateY(26deg)!important;opacity:.92!important;filter:saturate(.88) brightness(.8)!important;z-index:1}
+.project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-move-center{transform:translate3d(0,0,0) scale(1) rotate(0) rotateY(0deg)!important;opacity:1!important;filter:none!important;z-index:3}
+.project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-move-right{transform:translate3d(55%,0,0) scale(.79) rotate(0) rotateY(-26deg)!important;opacity:.92!important;filter:saturate(.88) brightness(.8)!important;z-index:2}
+.project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-exit-right{transform:translate3d(150%,0,0) scale(.7) rotate(0) rotateY(-26deg)!important;opacity:0!important;filter:saturate(.5) brightness(.55) blur(2px)!important;z-index:1}
 @media(max-width:760px){
-  .project-showcase .showcase-card.is-left,.project-showcase .showcase-card.slide-next-exit-left,.project-showcase .showcase-card.slide-prev-move-center{transform:translate3d(-57%,0,0) scale(.74) rotate(-3deg)!important}
-  .project-showcase .showcase-card.is-active,.project-showcase .showcase-card.slide-next-move-left,.project-showcase .showcase-card.slide-prev-move-right{transform:translate3d(0,0,0) scale(1) rotate(0)!important}
-  .project-showcase .showcase-card.is-right,.project-showcase .showcase-card.slide-next-move-center,.project-showcase .showcase-card.slide-prev-exit-right{transform:translate3d(57%,0,0) scale(.74) rotate(3deg)!important}
-  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-exit-left{transform:translate3d(-115%,0,0) scale(.68) rotate(-5deg)!important}
-  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-left{transform:translate3d(-57%,0,0) scale(.74) rotate(-3deg)!important}
-  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-center{transform:translate3d(0,0,0) scale(1) rotate(0)!important}
-  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-enter-right{transform:translate3d(57%,0,0) scale(.74) rotate(3deg)!important}
-  .project-showcase .showcase-card.slide-next-enter-right{transform:translate3d(115%,0,0) scale(.68) rotate(5deg)!important}
-  .project-showcase .showcase-card.slide-prev-enter-left{transform:translate3d(-115%,0,0) scale(.68) rotate(-5deg)!important}
-  .project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-enter-left{transform:translate3d(-57%,0,0) scale(.74) rotate(-3deg)!important}
-  .project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-move-center{transform:translate3d(0,0,0) scale(1) rotate(0)!important}
+  .project-showcase .showcase-card.is-left,.project-showcase .showcase-card.slide-next-exit-left,.project-showcase .showcase-card.slide-prev-move-center{transform:translate3d(-42%,0,0) scale(.74) rotate(0) rotateY(26deg)!important}
+  .project-showcase .showcase-card.is-active,.project-showcase .showcase-card.slide-next-move-left,.project-showcase .showcase-card.slide-prev-move-right{transform:translate3d(0,0,0) scale(1) rotate(0) rotateY(0deg)!important}
+  .project-showcase .showcase-card.is-right,.project-showcase .showcase-card.slide-next-move-center,.project-showcase .showcase-card.slide-prev-exit-right{transform:translate3d(42%,0,0) scale(.74) rotate(0) rotateY(-26deg)!important}
+  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-exit-left{transform:translate3d(-115%,0,0) scale(.68) rotate(0) rotateY(26deg)!important}
+  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-left{transform:translate3d(-42%,0,0) scale(.74) rotate(0) rotateY(26deg)!important}
+  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-center{transform:translate3d(0,0,0) scale(1) rotate(0) rotateY(0deg)!important}
+  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-enter-right{transform:translate3d(57%,0,0) scale(.74) rotate(0) rotateY(-26deg)!important}
+  .project-showcase .showcase-card.slide-next-enter-right{transform:translate3d(115%,0,0) scale(.68) rotate(0) rotateY(-26deg)!important}
+  .project-showcase .showcase-card.slide-prev-enter-left{transform:translate3d(-115%,0,0) scale(.68) rotate(0) rotateY(26deg)!important}
+  .project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-enter-left{transform:translate3d(-57%,0,0) scale(.74) rotate(0) rotateY(26deg)!important}
+  .project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-move-center{transform:translate3d(0,0,0) scale(1) rotate(0) rotateY(0deg)!important}
   .project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-move-right{transform:translate3d(57%,0,0) scale(.74) rotate(3deg)!important}
   .project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-exit-right{transform:translate3d(115%,0,0) scale(.68) rotate(5deg)!important}
 }
@@ -3799,3 +3799,454 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
 .site.page-home .intro-card,
 .site.page-home .glass-card{border-radius:36px!important}
 @media (max-width:760px){.site.page-home .intro-card,.site.page-home .glass-card{border-radius:28px!important}}
+
+/* Top bar: fully solid in both themes, so the frame's pale edge never shows through the tab or the pills */
+.site.night>.topbar .top-inset,
+.site.night>.topbar .top-pill{background-color:#302e43!important}
+.site:not(.night)>.topbar .top-inset,
+.site:not(.night)>.topbar .top-pill{background-color:#f7f5fc!important}
+
+/* Top bar centre tab: breathing room at both sides, and the three fields share the rest evenly */
+@media (min-width:761px){
+  .site>.topbar .top-inset{
+    padding-left:clamp(22px,3.2vw,48px)!important;
+    padding-right:clamp(22px,3.2vw,48px)!important;
+    justify-content:space-between!important;
+    gap:clamp(10px,1.8vw,28px)!important;
+  }
+}
+
+/* Top bar centre tab: its bottom edge sweeps up to the top edge in long S-curves on both sides, like the reference */
+@media (min-width:761px){
+  .site>.topbar{--wave:clamp(64px,7vw,150px);--pillw:148px}
+  .site>.topbar .top-inset{
+    left:calc(var(--pillw) + 14px + var(--wave) * .72)!important;
+    right:calc(var(--pillw) + 14px + var(--wave) * .72)!important;
+    height:68px!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    overflow:visible!important;
+    padding-top:12px!important;
+    padding-bottom:12px!important;
+    padding-left:clamp(14px,2vw,40px)!important;
+    padding-right:clamp(14px,2vw,40px)!important;
+  }
+  .site>.topbar .top-inset:before,
+  .site>.topbar .top-inset:after{
+    content:""!important;
+    display:block!important;
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:var(--wave);
+    height:auto;
+    transform:none!important;
+    pointer-events:none;
+    background-size:100% 100%!important;
+    background-repeat:no-repeat!important;
+  }
+  .site>.topbar .top-inset:before{
+    left:auto!important;
+    right:calc(100% - 1px);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0C66 0 34 100 100 100L100 0Z' fill='%23f7f5fc'/%3E%3C/svg%3E")!important;
+  }
+  .site>.topbar .top-inset:after{
+    right:auto!important;
+    left:calc(100% - 1px);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M100 0C34 0 66 100 0 100L0 0Z' fill='%23f7f5fc'/%3E%3C/svg%3E")!important;
+  }
+  .site.night>.topbar .top-inset:before{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0C66 0 34 100 100 100L100 0Z' fill='%23302e43'/%3E%3C/svg%3E")!important;
+  }
+  .site.night>.topbar .top-inset:after{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M100 0C34 0 66 100 0 100L0 0Z' fill='%23302e43'/%3E%3C/svg%3E")!important;
+  }
+  .site>.topbar .top-inset>a>span{text-align:left!important}
+  .site>.topbar .top-inset>a{align-items:flex-start!important}
+  .site>.topbar .top-inset>a>svg:first-child{margin-top:1px!important}
+}
+@media (min-width:761px) and (max-width:1100px){
+  .site>.topbar{--pillw:126px}
+}
+
+/* Top bar tab: never stretch past a comfortable width on big screens (stays centred), softer slope on small ones */
+@media (min-width:761px){
+  .site>.topbar .top-inset{
+    max-width:880px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
+@media (min-width:761px) and (max-width:1100px){
+  .site>.topbar .top-inset{height:62px!important;padding-top:9px!important;padding-bottom:9px!important}
+}
+
+/* Development workflow: steps wrap to the space available (no cramped row, no arrows) */
+.site.page-about .experience-workflow{
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))!important;
+  gap:8px!important;
+}
+.site.page-about .experience-workflow li:not(:last-child)::after{display:none!important}
+.site.page-about .experience-workflow li{
+  min-height:0!important;
+  padding:11px 12px!important;
+  min-width:0;
+}
+.site.page-about .experience-workflow li strong{
+  font-size:12.5px!important;
+  line-height:1.3!important;
+  overflow-wrap:anywhere;
+}
+.site.page-about .experience-workflow li{text-align:left!important;display:block!important}
+.site.page-about .experience-workflow li strong{margin-left:0!important;padding-left:0!important}
+
+/* ---- Speed: smoother scrolling ---- */
+/* The nav labels are invisible until hovered, but each one was still blurring what's behind it all the time */
+.site>.rail nav a>span{
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+/* Scrolling inside a card never drags the page behind it */
+.site .page-scroll,
+.site .about-scroll-content,
+.site .credential-scroll,
+.site .experience-list-panel,
+.site .experience-detail,
+.site .reference-hero{
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+}
+/* Phones: lighter blur on the two big role cards */
+@media (max-width:760px){
+  .site.page-about .experience-list-panel,
+  .site.page-about .experience-detail,
+  .site.night.page-about .experience-list-panel,
+  .site.night.page-about .experience-detail{
+    -webkit-backdrop-filter:blur(22px) saturate(170%)!important;
+    backdrop-filter:blur(22px) saturate(170%)!important;
+  }
+}
+
+/* ---- Loading skeleton for project screenshots (shows until the picture arrives) ---- */
+.site .showcase-image,
+.site .experience-preview-screen{
+  background-color:rgba(255,255,255,.35);
+  background-image:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);
+  background-size:220% 100%;
+  animation:skeleton-sweep 1.4s linear 4;
+}
+.site.night .showcase-image,
+.site.night .experience-preview-screen{
+  background-color:rgba(255,255,255,.07);
+  background-image:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.12) 50%,transparent 70%);
+}
+@keyframes skeleton-sweep{from{background-position:120% 0}to{background-position:-120% 0}}
+@media (prefers-reduced-motion:reduce){
+  .site .showcase-image,.site .experience-preview-screen{animation:none}
+}
+
+/* Project arrows: live only in the screenshot row, not over the whole card */
+.site .showcase-stage>.showcase-side-controls{z-index:12}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone::before{border-radius:34px}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:-6px}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:-6px}
+
+/* Project arrows, take 2: no shaded panel; two round glass buttons beside the main screenshot */
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone{
+  width:auto;
+  padding:0!important;
+  top:0;bottom:0;
+  pointer-events:none;
+}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone::before{display:none!important}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:calc(23% - 64px)}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:calc(23% - 64px);left:auto}
+.site .showcase-stage>.showcase-side-controls button{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.85);
+  background:rgba(255,255,255,.66);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
+  backdrop-filter:blur(14px) saturate(160%);
+  color:#302063;
+  box-shadow:0 10px 24px rgba(30,22,60,.22);
+  filter:none;
+  opacity:.94;
+  transform:none;
+  pointer-events:auto;
+}
+.site .showcase-stage>.showcase-side-controls button svg{width:22px;height:22px}
+.site .showcase-stage>.showcase-side-controls button:hover,
+.site .showcase-stage>.showcase-side-controls button:focus-visible{
+  background:rgba(255,255,255,.9);
+  color:#302063;
+  transform:scale(1.08);
+  filter:none;
+  opacity:1;
+}
+.site .showcase-stage>.showcase-side-controls button:active{transform:scale(.96)}
+.site .showcase-stage>.showcase-side-controls button:disabled{opacity:.4;transform:none}
+.site.night .showcase-stage>.showcase-side-controls button{
+  background:rgba(48,46,67,.72);
+  border-color:rgba(255,255,255,.22);
+  color:#f3eff5;
+  box-shadow:0 10px 24px rgba(8,8,22,.4);
+}
+.site.night .showcase-stage>.showcase-side-controls button:hover,
+.site.night .showcase-stage>.showcase-side-controls button:focus-visible{background:rgba(70,66,96,.9);color:#fff}
+@media (max-width:1100px){
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:calc(20% - 66px)}
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:calc(20% - 66px)}
+}
+
+/* Project arrows, take 3: hidden until you point at the main screenshot; they sit on its left and right edges */
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:calc(23% + 12px)}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:calc(23% + 12px);left:auto}
+@media (max-width:1100px){
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:calc(20% + 12px)}
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:calc(20% + 12px)}
+}
+.site .showcase-stage>.showcase-side-controls button{
+  width:44px;
+  height:44px;
+  opacity:0;
+  transform:scale(.9);
+  transition:opacity 180ms ease,transform 180ms ease,background-color 180ms ease;
+}
+.site .showcase-stage:has(.showcase-card.is-active:hover)>.showcase-side-controls button,
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone:hover button,
+.site .showcase-stage>.showcase-side-controls button:focus-visible{
+  opacity:1;
+  transform:scale(1);
+}
+.site .showcase-stage>.showcase-side-controls button:hover{transform:scale(1.08)}
+/* Touch screens can't hover, so keep the arrows showing there */
+@media (hover:none){
+  .site .showcase-stage>.showcase-side-controls button{opacity:.92;transform:none}
+}
+
+/* Project arrows, take 4: out at the sides of the big project card (level with the screenshots), not over any screenshot */
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:-54px!important;right:auto!important}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:-54px!important;left:auto!important}
+@media (max-width:1100px){
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:2px!important}
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:2px!important}
+}
+.site .showcase-stage:hover>.showcase-side-controls button{opacity:1;transform:scale(1)}
+.site .showcase-stage:hover>.showcase-side-controls button:hover{transform:scale(1.08)}
+@media (min-width:1101px) and (max-width:1330px){
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:2px!important}
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:2px!important}
+}
+
+/* Project arrows: shadows (a stronger drop shadow on the button, plus a soft glow of shade behind it that fades out smoothly) */
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone{position:absolute;display:flex;align-items:center;justify-content:center;width:44px}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone::before{
+  display:block!important;
+  content:"";
+  position:absolute;
+  left:50%;top:50%;
+  width:150px;height:150px;
+  margin:-75px 0 0 -75px;
+  background:radial-gradient(closest-side,rgba(24,16,56,.34),rgba(24,16,56,.14) 55%,transparent);
+  opacity:0;
+  transition:opacity 180ms ease;
+  pointer-events:none;
+  z-index:0;
+}
+.site .showcase-stage:hover>.showcase-side-controls .showcase-side-zone::before{opacity:1}
+@media (hover:none){.site .showcase-stage>.showcase-side-controls .showcase-side-zone::before{opacity:1}}
+.site .showcase-stage>.showcase-side-controls button{
+  position:relative;
+  z-index:1;
+  box-shadow:0 14px 30px rgba(20,12,48,.42),0 4px 10px rgba(20,12,48,.28),inset 0 1px 0 rgba(255,255,255,.7);
+}
+.site.night .showcase-stage>.showcase-side-controls button{
+  box-shadow:0 14px 30px rgba(0,0,0,.55),0 4px 10px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.14);
+}
+
+/* Project arrows, final: each side is a tall glass strip as high as the screenshots; click anywhere on it to move */
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone{width:56px!important;top:0!important;bottom:0!important;align-items:stretch}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone::before{display:none!important}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:-58px!important;right:auto!important}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:-58px!important;left:auto!important}
+@media (max-width:1330px){
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:2px!important}
+  .site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:2px!important}
+}
+.site .showcase-stage>.showcase-side-controls button{
+  width:56px;
+  height:100%;
+  border-radius:30px;
+  background:rgba(255,255,255,.5);
+  box-shadow:0 18px 40px rgba(20,12,48,.34),0 4px 12px rgba(20,12,48,.2),inset 0 1px 0 rgba(255,255,255,.75);
+  transform:none;
+}
+.site .showcase-stage>.showcase-side-controls button svg{width:26px;height:26px}
+.site .showcase-stage:hover>.showcase-side-controls button,
+.site .showcase-stage>.showcase-side-controls button:focus-visible{transform:none}
+.site .showcase-stage>.showcase-side-controls button:hover,
+.site .showcase-stage:hover>.showcase-side-controls button:hover{
+  transform:none;
+  background:rgba(255,255,255,.86);
+  box-shadow:0 22px 48px rgba(20,12,48,.42),0 6px 14px rgba(20,12,48,.24),inset 0 1px 0 rgba(255,255,255,.85);
+}
+.site .showcase-stage>.showcase-side-controls button:active{transform:scale(.98)}
+.site.night .showcase-stage>.showcase-side-controls button{background:rgba(48,46,67,.62)}
+.site.night .showcase-stage>.showcase-side-controls button:hover,
+.site.night .showcase-stage:hover>.showcase-side-controls button:hover{background:rgba(70,66,96,.9)}
+
+/* Project arrows, refined: the whole side is still clickable, but what you see is one small glass circle and a faint wash */
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone{width:76px!important}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-left{left:-6px!important}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-right{right:-6px!important}
+.site .showcase-stage>.showcase-side-controls button,
+.site.night .showcase-stage>.showcase-side-controls button{
+  position:relative;
+  width:100%!important;
+  height:100%!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  display:grid;
+  place-items:center;
+  overflow:visible;
+}
+/* the circle */
+.site .showcase-stage>.showcase-side-controls button::before{
+  content:"";
+  position:absolute;
+  left:50%;top:50%;
+  width:46px;height:46px;
+  margin:-23px 0 0 -23px;
+  border-radius:50%;
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 8px 22px rgba(20,12,48,.28);
+  -webkit-backdrop-filter:blur(12px) saturate(160%);
+  backdrop-filter:blur(12px) saturate(160%);
+  transition:transform 180ms ease,background-color 180ms ease,box-shadow 180ms ease;
+  z-index:0;
+}
+.site .showcase-stage>.showcase-side-controls button svg{position:relative;z-index:1;width:22px;height:22px}
+/* the faint wash that fades toward the middle, so there is no hard edge */
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-left button::after,
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-right button::after{
+  content:"";
+  position:absolute;inset:0;
+  opacity:0;
+  transition:opacity 200ms ease;
+  pointer-events:none;
+}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-left button::after{background:linear-gradient(90deg,rgba(255,255,255,.34),transparent)}
+.site .showcase-stage>.showcase-side-controls .showcase-side-zone-right button::after{background:linear-gradient(270deg,rgba(255,255,255,.34),transparent)}
+.site .showcase-stage>.showcase-side-controls button:hover::after,
+.site .showcase-stage>.showcase-side-controls button:focus-visible::after{opacity:1}
+.site .showcase-stage>.showcase-side-controls button:hover::before{
+  transform:scale(1.1);
+  background:rgba(255,255,255,.95);
+  box-shadow:0 12px 28px rgba(20,12,48,.34);
+}
+.site .showcase-stage>.showcase-side-controls button:active::before{transform:scale(.96)}
+.site .showcase-stage>.showcase-side-controls button:focus-visible{outline:2px solid #6251a3;outline-offset:-4px;border-radius:24px!important}
+.site.night .showcase-stage>.showcase-side-controls button::before{
+  background:rgba(48,46,67,.78);
+  border-color:rgba(255,255,255,.24);
+  box-shadow:0 8px 22px rgba(0,0,0,.5);
+}
+.site.night .showcase-stage>.showcase-side-controls button:hover::before{background:rgba(78,72,108,.95)}
+.site.night .showcase-stage>.showcase-side-controls .showcase-side-zone-left button::after{background:linear-gradient(90deg,rgba(255,255,255,.12),transparent)}
+.site.night .showcase-stage>.showcase-side-controls .showcase-side-zone-right button::after{background:linear-gradient(270deg,rgba(255,255,255,.12),transparent)}
+/* no wash behind the circle: a clean circle only; the full height still clicks */
+.site .showcase-stage>.showcase-side-controls button::after{display:none!important}
+
+/* Previous / next project previews: solid and defined, not melting into the background */
+.project-showcase .showcase-card.is-left,
+.project-showcase .showcase-card.is-right{
+  background:rgba(246,243,250,.97);
+  border-color:rgba(255,255,255,.9);
+  box-shadow:0 18px 40px rgba(14,10,32,.34);
+}
+.site.night .project-showcase .showcase-card.is-left,
+.site.night .project-showcase .showcase-card.is-right{
+  background:rgba(58,54,78,.97);
+  border-color:rgba(255,255,255,.2);
+  box-shadow:0 18px 40px rgba(0,0,0,.5);
+}
+
+/* Tablets: previews sit a little closer in and smaller, so neither is cut off by the card edge */
+@media (min-width:761px) and (max-width:1100px){
+  .project-showcase .showcase-card.is-left,
+  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-move-left,
+  .project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-enter-left{
+    transform:translate3d(-40%,0,0) scale(.72) rotate(0) rotateY(26deg)!important;
+  }
+  .project-showcase .showcase-card.is-right,
+  .project-showcase .showcase-stage.is-sliding-next.is-slide-to .showcase-card.slide-next-enter-right,
+  .project-showcase .showcase-stage.is-sliding-prev.is-slide-to .showcase-card.slide-prev-move-right{
+    transform:translate3d(40%,0,0) scale(.72) rotate(0) rotateY(-26deg)!important;
+  }
+}
+
+/* The middle project stands out: a bright frame and a deeper shadow, while the side previews stay a step quieter */
+.project-showcase .showcase-card.is-active{
+  border-color:rgba(255,255,255,.98);
+  background:rgba(250,248,253,.96);
+  box-shadow:
+    0 0 0 5px rgba(255,255,255,.5),
+    0 34px 70px rgba(20,12,48,.5),
+    0 10px 22px rgba(20,12,48,.28);
+}
+.site.night .project-showcase .showcase-card.is-active{
+  border-color:rgba(255,255,255,.55);
+  background:rgba(70,66,92,.96);
+  box-shadow:
+    0 0 0 5px rgba(255,255,255,.14),
+    0 34px 70px rgba(0,0,0,.65),
+    0 10px 22px rgba(0,0,0,.4);
+}
+
+/* Project card: all four corners share one smooth curve (they were 58 / 28 / 62 / 32px) */
+.site .project-showcase{border-radius:44px!important}
+@media (max-width:760px){
+  .site .project-showcase{border-radius:30px!important}
+}
+
+/* Project card: crisp rounded corners (the 3px blur layer inside it made the corner edges look soft) */
+.site .project-showcase::before{
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+}
+
+/* Light mode: thinner white veil so the photos show, tinted glass cards with a visible edge, softer frame */
+.site:not(.night).page-projects>#projects{background-image:linear-gradient(90deg,rgba(236,232,246,.88) 0%,rgba(236,232,246,.5) 50%,rgba(236,232,246,.14) 100%),url('/page-heroes/projects-morning.webp')!important}
+.site:not(.night).page-services>#services{background-image:linear-gradient(90deg,rgba(224,224,238,.88) 0%,rgba(224,224,238,.52) 52%,rgba(224,224,238,.16) 100%),url('/page-heroes/services-hero.webp')!important}
+.site:not(.night).page-contact>#contact{background-image:linear-gradient(90deg,rgba(222,216,228,.86) 0%,rgba(222,216,228,.5) 50%,rgba(222,216,228,.14) 100%),url('/page-heroes/contact-morning.webp')!important}
+.site:not(.night).page-credentials>#credentials{background:linear-gradient(125deg,#b9cfe0,#d6c9e6)!important}
+.site:not(.night) .project-showcase{
+  background:linear-gradient(180deg,rgba(226,220,242,.62),rgba(214,206,236,.8)),var(--showcase-image) center/cover!important;
+  border-color:rgba(255,255,255,.7)!important;
+}
+.site:not(.night) .project-showcase::before{background:linear-gradient(180deg,rgba(236,232,246,.06),rgba(214,206,236,.4) 72%,rgba(200,192,226,.6))!important}
+.site:not(.night).page-services .service,
+.site:not(.night).page-credentials .credential-card{
+  background-color:rgba(226,220,243,.5)!important;
+  border-color:rgba(120,100,175,.26)!important;
+  box-shadow:0 14px 34px rgba(60,44,110,.16)!important;
+}
+.site:not(.night) .frame-outline{border-color:#dcd6ea!important}
+.site:not(.night) .reference-hero{border-color:#dcd6ea!important}
+
+/* Project card in light mode: neutral frosted tint, no purple */
+.site:not(.night) .project-showcase{
+  background:linear-gradient(180deg,rgba(244,242,240,.6),rgba(232,229,226,.8)),var(--showcase-image) center/cover!important;
+}
+.site:not(.night) .project-showcase::before{background:linear-gradient(180deg,rgba(244,242,240,.05),rgba(226,223,220,.35) 72%,rgba(214,211,208,.55))!important}
+
+/* Theme buttons: bigger tap target (the glass pill stays the same size) */
+.site>.rail .theme-option{position:relative}
+.site>.rail .theme-option::after{content:"";position:absolute;inset:-9px}

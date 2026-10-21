@@ -5,8 +5,8 @@ const simple = (slug, color) => `https://cdn.simpleicons.org/${slug}${color ? `/
 // Colored Devicon artwork is preferred for developer technologies. Simple Icons
 // fills the gaps for products and deployment platforms that Devicon does not cover.
 export const brandIconSources = {
-  'REST APIs': ['https://api.iconify.design/mdi:api.svg?color=%2364558A'],
-  'WDD330 API': ['https://api.iconify.design/mdi:api.svg?color=%2364558A'],
+  'REST APIs': ['https://api.iconify.design/mdi/api.svg?color=%2364558A'],
+  'WDD330 API': ['https://api.iconify.design/mdi/api.svg?color=%2364558A'],
   HTML: [devicon('html5')],
   CSS: [devicon('css3')],
   JavaScript: [devicon('javascript')],
@@ -56,16 +56,16 @@ export const brandIconSources = {
   Lovable: ['https://lovable.dev/favicon.svg', simple('lovable', 'FF64B4')],
   'Systeme.io': ['https://d1yei2z3i6k35z.cloudfront.net/161/68f241caada76_Logo5.svg'],
   'AI-assisted tools': [simple('openai', '000000')],
-  'Web app maintenance': ['https://api.iconify.design/mdi:application-cog-outline.svg?color=%2364558A'],
-  'Business integrations': ['https://api.iconify.design/mdi:connection.svg?color=%2364558A'],
+  'Web app maintenance': ['https://api.iconify.design/mdi/application-cog-outline.svg?color=%2364558A'],
+  'Business integrations': ['https://api.iconify.design/mdi/connection.svg?color=%2364558A'],
   'VS Code': [devicon('vscode')],
-  MCP: ['https://api.iconify.design/mdi:transit-connection-variant.svg?color=%2364558A'],
+  MCP: ['https://api.iconify.design/mdi/transit-connection-variant.svg?color=%2364558A'],
   Capawesome: [simple('capacitor', '119EFF')],
   'App Store Connect': [simple('appstore', '0D96F6')],
   'Google Play Console': [simple('googleplay', '414141')],
-  'Payment setup': ['https://api.iconify.design/mdi:credit-card-check-outline.svg?color=%2364558A'],
-  'Checkout improvement': ['https://api.iconify.design/mdi:cart-check.svg?color=%2364558A'],
-  'Responsive optimization': ['https://api.iconify.design/mdi:responsive.svg?color=%2364558A'],
+  'Payment setup': ['https://api.iconify.design/mdi/credit-card-check-outline.svg?color=%2364558A'],
+  'Checkout improvement': ['https://api.iconify.design/mdi/cart-check.svg?color=%2364558A'],
+  'Responsive optimization': ['https://api.iconify.design/mdi/responsive.svg?color=%2364558A'],
 };
 
 export function getBrandIconSources(name, slug) {

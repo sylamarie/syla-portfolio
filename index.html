@@ -25,9 +25,54 @@
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"Person","name":"Syla Marie Cumuyog","jobTitle":"Full-Stack Software Developer","url":"https://sylamariecumuyog-portfolio.onrender.com/","sameAs":["https://github.com/sylamarie","https://www.linkedin.com/in/syla-marie-cumuyog-b11a62284/","https://v2.onlinejobs.ph/jobseekers/info/3534466"]}
     </script>
+    <script>
+      try{var t=localStorage.getItem('syla-theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-boot',d?'dark':'light')}catch(e){}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" /></noscript>
+    <link rel="preload" as="image" href="/page-heroes/villa-background-morning.webp" media="(prefers-color-scheme: light)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/page-heroes/villa-background.webp" media="(prefers-color-scheme: dark)" fetchpriority="high" />
+    <style>
+      #boot{position:fixed;inset:0;z-index:99999;box-sizing:border-box;padding:12px;background:#f1eee9;transition:opacity .3s ease,visibility .3s}
+      #boot.is-done{opacity:0;visibility:hidden;pointer-events:none}
+      html[data-boot="dark"] #boot{background:#25233a}
+      #boot .b-frame{position:relative;height:100%;border-radius:clamp(34px,5vw,70px);border:6px solid #f7f5fc;background:#c9d9e8;overflow:hidden}
+      html[data-boot="dark"] #boot .b-frame{border-color:#302e43;background:#34385a}
+      #boot .b{position:absolute;border-radius:22px;background:rgba(255,255,255,.55);overflow:hidden}
+      html[data-boot="dark"] #boot .b{background:rgba(255,255,255,.1)}
+      #boot .b::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);animation:b-shimmer 1.4s infinite}
+      html[data-boot="dark"] #boot .b::after{background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent)}
+      @keyframes b-shimmer{to{transform:translateX(100%)}}
+      #boot .b-rail{left:22px;top:50%;width:52px;height:300px;margin-top:-150px;border-radius:30px}
+      #boot .b-pill{top:20px;width:130px;height:46px;border-radius:30px}
+      #boot .b-pill.l{left:96px}#boot .b-pill.r{right:30px}
+      #boot .b-tab{top:0;left:50%;width:min(560px,46vw);height:66px;margin-left:calc(min(560px,46vw)/-2);border-radius:0 0 34px 34px}
+      #boot .b-title{left:110px;top:25%;width:min(640px,56vw);height:150px;border-radius:26px}
+      #boot .b-sub{left:110px;top:calc(25% + 176px);width:min(440px,40vw);height:70px;border-radius:22px}
+      #boot .b-card{right:42px;bottom:42px;width:min(380px,36vw);height:230px;border-radius:34px}
+      #boot .b-card2{left:110px;bottom:42px;width:min(420px,38vw);height:160px;border-radius:34px}
+      @media (max-width:760px){
+        #boot{padding:7px}
+        #boot .b-rail{display:none}#boot .b-tab{display:none}
+        #boot .b-pill{top:14px;width:42%;height:42px}#boot .b-pill.l{left:14px}#boot .b-pill.r{right:14px}
+        #boot .b-title{left:14px;right:14px;width:auto;top:90px;height:130px}
+        #boot .b-sub{left:14px;width:70%;top:240px}
+        #boot .b-card2{left:14px;right:14px;width:auto;bottom:auto;top:340px;height:150px}
+        #boot .b-card{left:14px;right:14px;width:auto;bottom:24px;height:150px}
+      }
+      @media (prefers-reduced-motion:reduce){#boot .b::after{animation:none}}
+    </style>
     <title>Syla Marie Cumuyog | Full-Stack Developer</title>
   </head>
   <body>
+    <div id="boot" role="status" aria-live="polite" aria-label="Loading portfolio">
+      <div class="b-frame">
+        <span class="b b-rail"></span><span class="b b-pill l"></span><span class="b b-tab"></span><span class="b b-pill r"></span>
+        <span class="b b-title"></span><span class="b b-sub"></span><span class="b b-card2"></span><span class="b b-card"></span>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
