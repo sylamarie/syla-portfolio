@@ -4292,3 +4292,29 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
 @media (min-width:761px){
   .site.night>.topbar .top-inset:before{display:block!important;content:""!important}
 }
+
+/* Tab curves: drawn as a shape filled with the tab's own colour, so they change colour in the same instant as the tab (no light flash when switching themes) */
+@media (min-width:761px){
+  .site>.topbar .top-inset,
+  .site.night>.topbar .top-inset{transition:none!important}
+  .site>.topbar .top-inset:before,
+  .site>.topbar .top-inset:after,
+  .site.night>.topbar .top-inset:before,
+  .site.night>.topbar .top-inset:after{
+    background-image:none!important;
+    background-color:var(--tab-fill)!important;
+    transition:none!important;
+    -webkit-mask-size:100% 100%;mask-size:100% 100%;
+    -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  }
+  .site>.topbar .top-inset{--tab-fill:#f7f5fc}
+  .site.night>.topbar .top-inset{--tab-fill:#302e43}
+  .site>.topbar .top-inset:before,.site.night>.topbar .top-inset:before{
+    -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0C66 0 34 100 100 100L100 0Z'/%3E%3C/svg%3E");
+    mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0C66 0 34 100 100 100L100 0Z'/%3E%3C/svg%3E");
+  }
+  .site>.topbar .top-inset:after,.site.night>.topbar .top-inset:after{
+    -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M100 0C34 0 66 100 0 100L0 0Z'/%3E%3C/svg%3E");
+    mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M100 0C34 0 66 100 0 100L0 0Z'/%3E%3C/svg%3E");
+  }
+}
