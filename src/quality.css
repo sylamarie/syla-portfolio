@@ -4258,3 +4258,32 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
 }
 /* Theme buttons: never smaller than 24px, as accessibility checks require */
 .site>.rail .theme-option{min-width:24px!important;min-height:24px!important}
+
+/* Phones: the two big work-experience cards no longer blur what is behind them (a 2,400px blur layer made scrolling stick) */
+@media (max-width:760px){
+  .site.page-about .experience-list-panel,
+  .site.page-about .experience-detail,
+  .site.night.page-about .experience-list-panel,
+  .site.night.page-about .experience-detail{
+    -webkit-backdrop-filter:none!important;
+    backdrop-filter:none!important;
+    background-color:rgba(246,243,250,.9)!important;
+  }
+  .site.night.page-about .experience-list-panel,
+  .site.night.page-about .experience-detail{background-color:rgba(44,41,62,.9)!important}
+  .site.page-about .about-scroll-content,
+  .site.page-about .about-scroll-content *{touch-action:pan-y pinch-zoom}
+  .site .experience-list-panel,
+  .site .experience-detail{overscroll-behavior:auto}
+}
+
+/* Phones: the tall tools panel on About also drops its blur (very tall blur layers can freeze scrolling on phones) */
+@media (max-width:760px){
+  .site.page-about .tools-section,
+  .site.night.page-about .tools-section{
+    -webkit-backdrop-filter:none!important;
+    backdrop-filter:none!important;
+    background-color:rgba(246,243,250,.9)!important;
+  }
+  .site.night.page-about .tools-section{background-color:rgba(44,41,62,.9)!important}
+}
