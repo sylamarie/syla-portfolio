@@ -3,3 +3,6 @@ dist/
 *.log
 assets-src/
 .DS_Store
+
+# Résumé is never published
+*resume*.pdf
