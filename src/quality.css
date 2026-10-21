@@ -4287,3 +4287,8 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
   }
   .site.night.page-about .tools-section{background-color:rgba(44,41,62,.9)!important}
 }
+
+/* Dark mode: an older rule hid the tab's left curve; show it like the right one */
+@media (min-width:761px){
+  .site.night>.topbar .top-inset:before{display:block!important;content:""!important}
+}
