@@ -4250,3 +4250,11 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
 /* Theme buttons: bigger tap target (the glass pill stays the same size) */
 .site>.rail .theme-option{position:relative}
 .site>.rail .theme-option::after{content:"";position:absolute;inset:-9px}
+
+/* Phones and tablets get a smaller copy of the Home photo (about a third of the download) */
+@media (max-width:900px){
+  .reference-hero{background-image:url('/page-heroes/villa-background-morning-mobile.webp')!important}
+  .site.night .reference-hero{background-image:url('/page-heroes/villa-background-mobile.webp')!important}
+}
+/* Theme buttons: never smaller than 24px, as accessibility checks require */
+.site>.rail .theme-option{min-width:24px!important;min-height:24px!important}
