@@ -150,7 +150,7 @@ function ProjectShowcase() {
   const getScreenshotLabel = (project, index) => project.screenshotLabels?.[index] || `Project screenshot ${index + 1}`;
   // A screenshot entry can be a list of images: one website shown as a single continuous scroll.
   const isSiteGroup = project => Array.isArray(project.screenshots?.[0]);
-  const getScreenshotCount = project => `${getScreenshotSources(project).length} ${isSiteGroup(project) ? 'websites' : 'screenshots'}`;
+  const getScreenshotCount = project => { const n = getScreenshotSources(project).length; return `${n} ${isSiteGroup(project) ? 'websites' : n === 1 ? 'screenshot' : 'screenshots'}`; };
   const previewScroll = useRef(null);
   useEffect(() => { previewScroll.current?.scrollTo(0, 0); }, [previewIndex, previewProject]);
   const openPreview = project => { setPreviewProject(project); setPreviewIndex(0); };
