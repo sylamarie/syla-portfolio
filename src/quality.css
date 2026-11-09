@@ -4321,7 +4321,6 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
 
 /* Projects with a note (Maintenix): button sits at the bottom right of the card on tablets too, and the card is tall enough to hold it */
 @media (min-width:761px) and (max-width:1100px){
-  .site .project-showcase.has-note{height:1040px!important;min-height:1040px!important}
   .site .project-showcase.has-note .showcase-footer{display:block!important;position:relative;padding-bottom:92px!important;min-height:0!important}
   .site .project-showcase.has-note .showcase-note{max-width:calc(100% - 210px)}
   .site .project-showcase.has-note .showcase-link{position:absolute;right:0;bottom:92px;margin:0;align-self:auto}
@@ -4329,7 +4328,6 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
 
 /* Maintenix on desktop: tall enough for its content, so nothing is clipped at the bottom */
 @media (min-width:1101px){
-  .site .project-showcase.has-note{height:1000px!important;min-height:1000px!important}
 }
 
 /* Maintenix: thinner tint so its dashboard picture shows clearly behind the card */
@@ -4359,3 +4357,14 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
   background:linear-gradient(180deg,rgba(24,23,38,.55),rgba(22,21,36,.78)),var(--showcase-image) center/cover!important;
 }
 .site.night .project-showcase::before{background:linear-gradient(180deg,rgba(20,22,37,.04),rgba(20,18,39,.25) 72%,rgba(16,14,30,.4))!important}
+
+/* Every project card is the same height on phones too (the tallest card sets it) */
+@media (max-width:760px){
+  .site .project-showcase{min-height:1000px!important}
+}
+
+/* Tablets: all project cards share one taller height, so no card's text reaches the dots */
+@media (min-width:761px) and (max-width:1100px){
+  .site .project-showcase,
+  .site.page-projects .project-showcase{height:960px!important;min-height:960px!important}
+}
