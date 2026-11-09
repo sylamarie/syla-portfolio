@@ -4318,3 +4318,44 @@ a:focus:not(:focus-visible),button:focus:not(:focus-visible),[role=button]:focus
     mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M100 0C34 0 66 100 0 100L0 0Z'/%3E%3C/svg%3E");
   }
 }
+
+/* Projects with a note (Maintenix): button sits at the bottom right of the card on tablets too, and the card is tall enough to hold it */
+@media (min-width:761px) and (max-width:1100px){
+  .site .project-showcase.has-note{height:1040px!important;min-height:1040px!important}
+  .site .project-showcase.has-note .showcase-footer{display:block!important;position:relative;padding-bottom:92px!important;min-height:0!important}
+  .site .project-showcase.has-note .showcase-note{max-width:calc(100% - 210px)}
+  .site .project-showcase.has-note .showcase-link{position:absolute;right:0;bottom:92px;margin:0;align-self:auto}
+}
+
+/* Maintenix on desktop: tall enough for its content, so nothing is clipped at the bottom */
+@media (min-width:1101px){
+  .site .project-showcase.has-note{height:1000px!important;min-height:1000px!important}
+}
+
+/* Maintenix: thinner tint so its dashboard picture shows clearly behind the card */
+.site:not(.night) .project-showcase.has-note{
+  background:linear-gradient(180deg,rgba(244,242,240,.3),rgba(232,229,226,.5)),var(--showcase-image) center/cover!important;
+}
+.site:not(.night) .project-showcase.has-note::before{background:linear-gradient(180deg,rgba(244,242,240,.04),rgba(226,223,220,.18) 72%,rgba(214,211,208,.3))!important}
+.site.night .project-showcase.has-note{
+  background:linear-gradient(180deg,rgba(24,23,38,.4),rgba(22,21,36,.62)),var(--showcase-image) center/cover!important;
+}
+.site.night .project-showcase.has-note::before{background:linear-gradient(180deg,rgba(20,22,37,.04),rgba(20,18,39,.25) 72%,rgba(16,14,30,.4))!important}
+
+/* Maintenix, middle setting: the dashboard still shows as soft shapes and colour, with a slightly stronger tint so the text stays easy to read */
+.site:not(.night) .project-showcase.has-note{
+  background:linear-gradient(180deg,rgba(244,242,240,.5),rgba(232,229,226,.72)),var(--showcase-image) center/cover!important;
+}
+.site.night .project-showcase.has-note{
+  background:linear-gradient(180deg,rgba(24,23,38,.55),rgba(22,21,36,.78)),var(--showcase-image) center/cover!important;
+}
+
+/* All project cards: same soft picture background and tint as Maintenix */
+.site:not(.night) .project-showcase{
+  background:linear-gradient(180deg,rgba(244,242,240,.5),rgba(232,229,226,.72)),var(--showcase-image) center/cover!important;
+}
+.site:not(.night) .project-showcase::before{background:linear-gradient(180deg,rgba(244,242,240,.04),rgba(226,223,220,.18) 72%,rgba(214,211,208,.3))!important}
+.site.night .project-showcase{
+  background:linear-gradient(180deg,rgba(24,23,38,.55),rgba(22,21,36,.78)),var(--showcase-image) center/cover!important;
+}
+.site.night .project-showcase::before{background:linear-gradient(180deg,rgba(20,22,37,.04),rgba(20,18,39,.25) 72%,rgba(16,14,30,.4))!important}
